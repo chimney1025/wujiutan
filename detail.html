@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
+<meta charset="utf-8" name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<title>Page</title>
+
+<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+<link rel="import" href="elements/thumbnails-with-caption.html">
+<link rel="import" href="elements/footer.html">
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="/styles.css" rel="stylesheet" type="text/css" />
@@ -8,11 +16,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js"></script>
 
-<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-<link rel="import" href="elements/thumbnails-with-caption.html">
-
-  <meta charset="utf-8">
-  <title>Page</title>
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -100,55 +103,9 @@
           <h2 class="title text-center">推荐活动</h2>
         </div>
       </div>
-	  <thumbnails-with-caption></thumbnails-with-caption>
-      <div class="row">
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-	  <div class="thumbnail-img">
-        <img class="img-responsive" src="http://i1.sinaimg.cn/travel/2013/0717/U9732P1482DT20130717185015.jpg_U9732P704DT20130717185320.jpg" alt="...">
+	  <div class="row">
+	    <thumbnails-with-caption></thumbnails-with-caption>
 	  </div>
-      <div class="caption">
-        <h3><a class="hover-effect" href="#">房车露营</a></h3>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-      </div>
-    </div>
-  </div>
-		
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-	  <div class="thumbnail-img">
-        <img class="img-responsive" src="http://www.guilinly8.com/uploads/allimg/141224/141224103632.jpg" alt="...">
-	  </div>
-      <div class="caption">
-        <h3><a class="hover-effect" href="#">摄影</a></h3>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-      </div>
-    </div>
-  </div>
-		
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-	  <div class="thumbnail-img">
-        <img class="img-responsive" src="http://www.therange.co.uk/blog/wp-content/uploads/2013/06/Easy-BBQ-Sauce-Recipe.jpg" alt="...">
-      </div>
-      <div class="caption">
-        <h3><a class="hover-effect" href="#">烧烤野餐</a></h3>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-      </div>
-    </div>
-  </div>
-		
-  <div class="col-sm-6 col-md-3">
-    <div class="thumbnail">
-	  <div class="thumbnail-img">
-        <img class="img-responsive" src="http://file4.mafengwo.net/M00/4D/8F/wKgBm03HhgO5bf19AADB8GTjJAY50.jpeg" alt="...">
-	  </div>
-      <div class="caption">
-        <h3><a class="hover-effect" href="#">登山徒步</a></h3>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-      </div>
-    </div>
-  </div>
       <div class="row">
         <div class="col-lg-12 text-center">
           <a class="hover-effect btn btn-success">查看更多活动</a>
@@ -156,57 +113,6 @@
       </div>
     </div>
   </section>
-  <footer class="bg-footer">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <p>2015 &copy; All Rights Reserved.
-              <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-            </p>
-          </div>
-          <!-- Social Links -->
-          <div class="col-lg-12">
-            <ul class="list-inline">
-              <li>
-                <a data-original-title="Facebook" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Skype" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-skype"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Google Plus" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-google-plus"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Linkedin" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Pinterest" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-pinterest"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Twitter" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Dribbble" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- End Social Links -->
-        </div>
-    </div>
-  </footer>
+  <footer-element></footer-element>
 </body>
 </html>

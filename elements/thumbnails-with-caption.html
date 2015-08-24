@@ -1,14 +1,65 @@
-<link rel="import"
-      href="../bower_components/polymer/polymer.html">
+﻿<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="thumbnails-with-caption">
 
-<script>
-  // register a new element called proto-element
-  Polymer({
-    is: "thumbnails-with-caption",
-    // add a callback to the element's prototype
-    ready: function() {
-      this.textContent = "I'm a proto-element. Check out my prototype!"
-    }
-  });
-</script>
+<style>
+	.thumbnail-img{
+	  overflow: hidden;
+	  height: 145px;
+	}
+	
+	.thumbnail h3 a{
+	  color: #585f69;
+      font-size: 18px;
+	}
+
+    .thumbnail h3 a:hover{
+	  color: #72c02c;
+	  text-decoration: none;
+	}
+</style>
+<template>
+	<template is="dom-repeat" items="{{list}}">
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<div class="thumbnail-img">
+					<img class="img-responsive" src="{{item.imgsrc}}" alt="">
+				</div>
+				<div class="caption">
+					<h3><a class="hover-effect" href="#">{{item.title}}</a></h3>
+					<p>{{item.desc}}</p>
+				</div>
+			</div>
+		</div>
+	</template>
+</template>
+	<script>
+	  Polymer({
+		is: 'thumbnails-with-caption',
+		ready: function(){
+		  this.list = [
+			{
+				imgsrc: "http://www.thecarpeople.co.uk/content/images/blog/Entry_432/fb02de5b-a964-4836-8105-64af05e94006.jpg",
+				title: "房车露营",
+				desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+			},
+			{
+				imgsrc: "http://www.therange.co.uk/blog/wp-content/uploads/2013/06/Easy-BBQ-Sauce-Recipe.jpg",
+				title: "烧烤野餐",
+				desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+			},
+			{
+				imgsrc: "http://www.guilinly8.com/uploads/allimg/141224/141224103632.jpg",
+				title: "摄影",
+				desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+			},
+			{
+				imgsrc: "http://file4.mafengwo.net/M00/4D/8F/wKgBm03HhgO5bf19AADB8GTjJAY50.jpeg",
+				title: "登山徒步",
+				desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+			}
+		  ];
+		}
+	  });
+	</script>
+</dom-module>
 
