@@ -2,11 +2,22 @@
     body {
       font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
     }
-    
+	
+    h1, h2, h3, h4, h5, h6 {
+      color: #555;
+      font-weight: normal;
+      margin-top: 5px;
+      text-shadow: none;
+	}
+	
     h2{
       font-size: 24px;
       line-height: 33px;
     }
+	
+	a, a:focus, a:hover, a:active {
+      outline: 0 none !important;
+	}
     
     .btn {
       border-radius: 0;
@@ -57,6 +68,10 @@ section .container {
     padding: 60px 15px;
     position: relative;
     text-align: center;
+}
+
+.bg-dark h1{
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .bg-footer{
@@ -115,8 +130,31 @@ section .container {
       margin-bottom: 30px;
       padding: 20px;
     }
+	
+	.camera {
+	  opacity: 0.5;
+	}
     
     .camera-details strong{
       min-width: 100px;
       display: inline-block;
+    }
+	
+	.thumbnail-img{
+	  overflow: hidden;
+	  height: 145px;
+	}
+	
+	.thumbnail h3 a{
+	  color: #585f69;
+      font-size: 18px;
+	}
+
+    .thumbnail h3 a:hover{
+	  color: #72c02c;
+	  text-decoration: none;
+	}
+	
+	.hover-effect {
+      transition: all 0.4s ease-in-out 0s;
     }
