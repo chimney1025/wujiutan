@@ -1,0 +1,19 @@
+{
+  "name": "wujiutan",
+  "version": "0.0.0",
+  "authors": [
+    "Haoli Qu <haoli.qu@arm.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "polymer-ui-elements": "Polymer/polymer-ui-elements#~0.3.0"
+  }
+}
