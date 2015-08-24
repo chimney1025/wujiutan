@@ -6,7 +6,8 @@
 
 <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
-<link rel="import" href="elements/thumbnails-with-caption.html">
+<link rel="import" href="elements/nav.html">
+<link rel="import" href="elements/thumbnails.html">
 <link rel="import" href="elements/footer.html">
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -18,52 +19,7 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-bars"></span>
-        </button>
-        <a class="navbar-brand" href="/index.html">Start Bootstrap</a>
-      </div>
-      <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">主要项目<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="/detail.html">乌桕滩露营区</a>
-              </li>
-              <li>
-                <a href="#">生态农场</a>
-              </li>
-              <li>
-                <a href="#">健康生活</a>
-              </li>
-              <li>
-                <a href="#">度假休闲</a>
-              </li>
-              <li>
-                <a href="#">户外徒步</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">在线体验<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="/camera.html">实时录像</a>
-              </li>
-              <li>
-                <a href="/photos.html">相册</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <nav-element></nav-element>
   <div class="breadcrumbs">
     <div class="container">
       <h1 class="pull-left">乌桕滩露营区</h1>
@@ -104,7 +60,7 @@
         </div>
       </div>
 	  <div class="row">
-	    <thumbnails-with-caption></thumbnails-with-caption>
+	    <thumbnail-list></thumbnail-list>
 	  </div>
       <div class="row">
         <div class="col-lg-12 text-center">

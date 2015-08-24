@@ -1,62 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
+<meta charset="utf-8" name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<title>Page</title>
+
+<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+<link rel="import" href="elements/nav.html">
+<link rel="import" href="elements/thumbnails.html">
+<link rel="import" href="elements/footer.html">
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="/styles.css" rel="stylesheet" type="text/css" />
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js"></script>
-  <meta charset="utf-8">
-  <title>Index</title>
+
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-bars"></span>
-        </button>
-        <a class="navbar-brand" href="/index.html">Start Bootstrap</a>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">主要项目<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="/detail.html">乌桕潭露营区</a>
-              </li>
-              <li>
-                <a href="#">生态农场</a>
-              </li>
-              <li>
-                <a href="#">健康生活</a>
-              </li>
-              <li>
-                <a href="#">度假休闲</a>
-              </li>
-              <li>
-                <a href="#">户外徒步</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">在线体验<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="/camera.html">实时录像</a>
-              </li>
-              <li>
-                <a href="/photos.html">相册</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <nav-element></nav-element>
   <header class="bg-dark">
     <div class="container text-left">
       <h1>Creative</h1>
@@ -101,57 +64,6 @@
       </div>
     </div>
   </section>
-  <footer class="bg-footer">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <p>2015 &copy; All Rights Reserved.
-              <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-            </p>
-          </div>
-          <!-- Social Links -->
-          <div class="col-lg-12">
-            <ul class="list-inline">
-              <li>
-                <a data-original-title="Facebook" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Skype" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-skype"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Google Plus" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-google-plus"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Linkedin" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Pinterest" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-pinterest"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Twitter" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a data-original-title="Dribbble" title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- End Social Links -->
-        </div>
-    </div>
-  </footer>
+  <footer-element></footer-element>
 </body>
 </html>
