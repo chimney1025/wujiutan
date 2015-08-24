@@ -1,97 +1,97 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <dom-module id="nav-element">
 
-<style>
+    <style>
 
-.navbar-default{
-	margin: 0;
-    background: #fff none repeat scroll 0 0;
-    border-bottom: 2px solid #eee;
-    position: relative;
-    z-index: 99;
-}
-.navbar-nav{
-    float:right;
-}
-	
-</style>
-<template>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-bars"></span>
-        </button>
-        <a class="navbar-brand" href="{{brandurl}}">{{brandname}}</a>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-		  <template is="dom-repeat" items="{{ mainmenus }}">
-			  <li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">{{item.name}}<b class="caret"></b></a>
-				<ul class="dropdown-menu">
-				  <template is="dom-repeat" items="{{ item.submenus }}">
-				  <li>
-					<a href="{{item.url}}">{{item.name}}</a>
-				  </li>
-				  </template>
-				</ul>
-			  </li>
-		  </template>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</template>
-	<script>
-	  Polymer({
-		is: 'nav-element',
-		brandurl: "/index.html",
-		brandname: "Start Bootstrap",
-		ready: function(){
-		  this.mainmenus = [
-			{
-				name: "主要项目",
-				submenus: [
-				  {
-					name: "乌桕滩露营区",
-					url: "/detail.html"
-				  },
-				  {
-					name: "生态农场",
-					url: "/detail.html"
-				  },
-				  {
-					name: "健康生活",
-					url: "/detail.html"
-				  },
-				  {
-					name: "休闲度假",
-					url: "/detail.html"
-				  },
-				  {
-					name: "户外徒步",
-					url: "/detail.html"
-				  }
-				]
-			},
-			{
-				name: "在线体验",
-				submenus: [
-				  {
-					name: "实时监控",
-					url: "/camera.html"
-				  },
-				  {
-					name: "相册",
-					url: "/photos.html"
-				  }
-				]
-			}
-		  ];
-		}
-	  });
-	</script>
+        .navbar-default{
+            margin: 0;
+            background: #fff none repeat scroll 0 0;
+            border-bottom: 2px solid #eee;
+            position: relative;
+            z-index: 99;
+        }
+        .navbar-nav{
+            float:right;
+        }
+
+    </style>
+    <template>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a id="brandname" class="navbar-brand"></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <template is="dom-repeat" items="{{ mainmenus }}">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">{{item.name}}<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <template is="dom-repeat" items="{{ item.submenus }}">
+                                        <li>
+                                            <a href="{{item.url}}">{{item.name}}</a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </template>
+    <script>
+        Polymer({
+            is: 'nav-element',
+            ready: function(){
+                this.$.brandname.textContent = "Start Bootstrap";
+                this.$.brandname.href="/index.html";
+                this.mainmenus = [
+                    {
+                        name: "主要项目",
+                        submenus: [
+                            {
+                                name: "乌桕滩露营区",
+                                url: "/detail.html"
+                            },
+                            {
+                                name: "生态农场",
+                                url: "/detail.html"
+                            },
+                            {
+                                name: "健康生活",
+                                url: "/detail.html"
+                            },
+                            {
+                                name: "休闲度假",
+                                url: "/detail.html"
+                            },
+                            {
+                                name: "户外徒步",
+                                url: "/detail.html"
+                            }
+                        ]
+                    },
+                    {
+                        name: "在线体验",
+                        submenus: [
+                            {
+                                name: "实时监控",
+                                url: "/camera.html"
+                            },
+                            {
+                                name: "相册",
+                                url: "/photos.html"
+                            }
+                        ]
+                    }
+                ];
+            }
+        });
+    </script>
 </dom-module>
 

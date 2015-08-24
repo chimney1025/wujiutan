@@ -1,37 +1,37 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <dom-module id="thumbnail-nocap-list">
 
-<style>
-</style>
-<template>
-	<template is="dom-repeat" items="{{list}}">
-		<div class="col-sm-6 col-md-3">
-			<a href="#" class="thumbnail">
-				<img src="{{item.imgsrc}}" alt="">
-			</a>
-		</div>
-	</template>
-</template>
-	<script>
-	  Polymer({
-		is: 'thumbnail-nocap-list',
-		ready: function(){
-		  this.list = [
-			{
-				imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img26.jpg",
-			},
-			{
-				imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img25.jpg",
-			},
-			{
-				imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img24.jpg",
-			},
-			{
-				imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img23.jpg",
-			}
-		  ];
-		}
-	  });
-	</script>
+    <style>
+    </style>
+    <template>
+        <template is="dom-repeat" items="{{list}}">
+            <div class="col-sm-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="{{item.imgsrc}}" alt="">
+                </a>
+            </div>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'thumbnail-nocap-list',
+            ready: function(){
+                this.list = [
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img26.jpg",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img25.jpg",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img24.jpg",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img23.jpg",
+                    }
+                ];
+            }
+        });
+    </script>
 </dom-module>
 
