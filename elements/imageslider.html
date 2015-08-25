@@ -48,12 +48,14 @@
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner" role="listbox">
 			<template is="dom-repeat" items="{{list}}">
+			<template is="dom-if" if="{{showImage(item.page)}}">
 			<div class$="{{item.css}}">
 				<img alt="" src="{{item.imgsrc}}">
 				<div class="carousel-caption">
 					<p>{{item.desc}}</p>
 				</div>
 			</div>
+			</template>
 			</template>
 		</div>
 		<div class="carousel-arrow">
@@ -69,27 +71,54 @@
     <script>
         Polymer({
             is: 'image-slider',
+			properties: {
+				page: String
+			},
+			showImage: function(name){
+				if(name == this.page){
+					return true;
+				} else {
+					return false;
+				}
+			},
             ready: function(){
+				console.log('ready');
                 this.list = [
                     {
+						page: "wujiutan",
                         imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img26.jpg",
 						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
 						css: "item active"
                     },
                     {
+						page: "wujiutan",
                         imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img25.jpg",
 						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
 						css: "item"
                     },
                     {
+						page: "farm",
                         imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img24.jpg",
 						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
-						css: "item"
+						css: "item active"
                     },
                     {
+						page: "hiking",
                         imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img23.jpg",
 						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
-						css: "item"
+						css: "item active"
+                    },
+                    {
+						page: "healthy",
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img22.jpg",
+						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
+						css: "item active"
+                    },
+                    {
+						page: "holiday",
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img21.jpg",
+						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
+						css: "item active"
                     }
                 ];
             }
