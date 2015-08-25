@@ -1,7 +1,15 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <dom-module id="image-slider">
     <style>
-	.carousel .carousel-arrow a.carousel-control {
+
+:host{
+}
+
+.carousel{
+	margin: 20px;
+}
+	
+.carousel .carousel-arrow a.carousel-control {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     font-size: 30px;
     height: inherit;
@@ -37,17 +45,10 @@
 
     </style>
     <template>
-	<div id="myCarousel" class="carousel slide">
-		<div class="carousel-inner">
-			
-			<div class="item active">
-				<img alt="" src="http://m1.img.srcdd.com/farm4/d/2012/1203/08/D95883172DC64A8A3181D613BF14EE36_B800_2400_750_499.JPEG">
-				<div class="carousel-caption">
-					<p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
-				</div>
-			</div>
-			<template is="dom-repeat" items="list">
-			<div class="item">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner" role="listbox">
+			<template is="dom-repeat" items="{{list}}">
+			<div class$="{{item.css}}">
 				<img alt="" src="{{item.imgsrc}}">
 				<div class="carousel-caption">
 					<p>{{item.desc}}</p>
@@ -71,8 +72,24 @@
             ready: function(){
                 this.list = [
                     {
-                        imgsrc: "http://m1.img.srcdd.com/farm4/d/2012/1203/08/D95883172DC64A8A3181D613BF14EE36_B800_2400_750_499.JPEG",
-						desc: "Facilisis odio, dapibus ac justo acilisis gestinas."
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img26.jpg",
+						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
+						css: "item active"
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img25.jpg",
+						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
+						css: "item"
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img24.jpg",
+						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
+						css: "item"
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img23.jpg",
+						desc: "Facilisis odio, dapibus ac justo acilisis gestinas.",
+						css: "item"
                     }
                 ];
             }
