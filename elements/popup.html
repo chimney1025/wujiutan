@@ -1,62 +1,62 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <dom-module id="popup-content">
     <style>
-	.carousel .carousel-arrow a.carousel-control {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    font-size: 30px;
-    height: inherit;
-    opacity: 1;
-    position: inherit;
-    text-shadow: none;
-    width: inherit;
-}
+        .carousel .carousel-arrow a.carousel-control {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            font-size: 30px;
+            height: inherit;
+            opacity: 1;
+            position: inherit;
+            text-shadow: none;
+            width: inherit;
+        }
 
-.carousel .carousel-arrow a i {
-    background: #000 none repeat scroll 0 0;
-    margin-top: -18px;
-    opacity: 0.6;
-    padding: 2px 12px;
-    position: absolute;
-    top: 50%;
-}
+        .carousel .carousel-arrow a i {
+            background: #000 none repeat scroll 0 0;
+            margin-top: -18px;
+            opacity: 0.6;
+            padding: 2px 12px;
+            position: absolute;
+            top: 50%;
+        }
 
-.carousel .carousel-arrow a.left i {
-    left: 0;
-}
-.carousel .carousel-arrow a.right i {
-    right: 0;
-}
+        .carousel .carousel-arrow a.left i {
+            left: 0;
+        }
+        .carousel .carousel-arrow a.right i {
+            right: 0;
+        }
 
-.carousel .carousel-caption {
-    background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
-    bottom: 0;
-    left: 0;
-    padding: 7px 15px;
-    right: 0;
-}
+        .carousel .carousel-caption {
+            background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+            bottom: 0;
+            left: 0;
+            padding: 7px 15px;
+            right: 0;
+        }
 
     </style>
     <template>
-	
-<div class="cbp-popup-wrap cbp-popup-lightbox cbp-popup-ready" data-action="close" style="display: none;">
-	<div class="cbp-popup-content">
-		<div class="cbp-popup-lightbox-figure">
-			<img class="cbp-popup-lightbox-img" data-action="next" src="assets/img/main/img9.jpg" style="max-height: 39px;">
-			<div class="cbp-popup-lightbox-bottom">
-				<div class="cbp-popup-lightbox-title">Design Object</div>
-				<div class="cbp-popup-lightbox-counter">2 of 6</div>
-			</div>
-		</div>
-	</div>
-	<div class="cbp-popup-loadingBox"></div>
-	<div class="cbp-popup-navigation-wrap">
-		<div class="cbp-popup-navigation">
-			<div class="cbp-popup-close" title="Close (Esc arrow key)" data-action="close"></div>
-			<div class="cbp-popup-next" title="Next (Right arrow key)" data-action="next" style="display: block;"></div>
-			<div class="cbp-popup-prev" title="Previous (Left arrow key)" data-action="prev" style="display: block;"></div>
-		</div>
-	</div>
-</div>
+
+        <div class="cbp-popup-wrap cbp-popup-lightbox cbp-popup-ready" data-action="close" style="display: none;">
+            <div class="cbp-popup-content">
+                <div class="cbp-popup-lightbox-figure">
+                    <img class="cbp-popup-lightbox-img" data-action="next" src="assets/img/main/img9.jpg" style="max-height: 39px;">
+                    <div class="cbp-popup-lightbox-bottom">
+                        <div class="cbp-popup-lightbox-title">Design Object</div>
+                        <div class="cbp-popup-lightbox-counter">2 of 6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-popup-loadingBox"></div>
+            <div class="cbp-popup-navigation-wrap">
+                <div class="cbp-popup-navigation">
+                    <div class="cbp-popup-close" title="Close (Esc arrow key)" data-action="close"></div>
+                    <div class="cbp-popup-next" title="Next (Right arrow key)" data-action="next" style="display: block;"></div>
+                    <div class="cbp-popup-prev" title="Previous (Left arrow key)" data-action="prev" style="display: block;"></div>
+                </div>
+            </div>
+        </div>
     </template>
     <script>
         Polymer({
@@ -65,7 +65,7 @@
                 this.list = [
                     {
                         imgsrc: "http://m1.img.srcdd.com/farm4/d/2012/1203/08/D95883172DC64A8A3181D613BF14EE36_B800_2400_750_499.JPEG",
-						desc: "Facilisis odio, dapibus ac justo acilisis gestinas."
+                        desc: "Facilisis odio, dapibus ac justo acilisis gestinas."
                     }
                 ];
             }

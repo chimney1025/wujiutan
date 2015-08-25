@@ -11,7 +11,7 @@
                 <ul class="pull-right breadcrumb">
                     <template is="dom-repeat" items="{{path}}">
                         <li class$="{{item.style}}">
-                            <a href="{{item.url}}">{{item.name}}</a>
+                        <a href="{{item.url}}">{{item.name}}</a>
                         </li>
                     </template>
                 </ul>
@@ -24,11 +24,11 @@
             ready: function(){
                 this.$.title.textContent = "乌桕滩露营区";
                 this.path = [
-					{
-						name: "首页",
-						url: "/#/home",
-						style: ""
-					},
+                    {
+                        name: "首页",
+                        url: "/#/home",
+                        style: ""
+                    },
                     {
                         name: "主要项目",
                         url: "",

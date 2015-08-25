@@ -4,27 +4,27 @@
     </style>
     <template>
         <template is="dom-repeat" items="{{list}}">
-			<template is="dom-if" if="{{showThis(index)}}">
-            <div class="col-sm-6 col-md-3">
-                <template is="dom-if" if="{{showCaption(caption)}}">
-                    <div class="thumbnail">
-                        <div class="thumbnail-img">
-                            <img class="img-responsive" src="{{item.imgsrc}}" alt="">
+            <template is="dom-if" if="{{showThis(index)}}">
+                <div class="col-sm-6 col-md-3">
+                    <template is="dom-if" if="{{showCaption(caption)}}">
+                        <div class="thumbnail">
+                            <div class="thumbnail-img">
+                                <img class="img-responsive" src="{{item.imgsrc}}" alt="">
+                            </div>
+                            <div class="caption">
+                                <h3><a class="hover-effect" href="#">{{item.title}}</a></h3>
+                                <p>{{item.desc}}</p>
+                            </div>
                         </div>
-                        <div class="caption">
-                            <h3><a class="hover-effect" href="#">{{item.title}}</a></h3>
-                            <p>{{item.desc}}</p>
-                        </div>
-                    </div>
-                </template>
+                    </template>
 
-                <template is="dom-if" if="{{!showCaption(caption)}}">
-                    <a href="#" class="thumbnail">
-                        <img src="{{item.imgsrc}}" alt="">
-                    </a>
-                </template>
-            </div>
-			</template>
+                    <template is="dom-if" if="{{!showCaption(caption)}}">
+                        <a href="#" class="thumbnail">
+                            <img src="{{item.imgsrc}}" alt="">
+                        </a>
+                    </template>
+                </div>
+            </template>
         </template>
     </template>
     <script>
@@ -34,25 +34,25 @@
                 caption: {
                     type: String
                 },
-				count: {
-					type: Number,
-					value: 4
-				}
+                count: {
+                    type: Number,
+                    value: 4
+                }
             },
-			showCaption: function(option){
-				if(option == "true"){
-					return true;
-				} else {
-					return false;
-				}
-			},
-			showThis: function(index){
-				if(index < this.count) {
-					return true;
-				} else {
-					return false;
-				}
-			},
+            showCaption: function(option){
+                if(option == "true"){
+                    return true;
+                } else {
+                    return false;
+                }
+            },
+            showThis: function(index){
+                if(index < this.count) {
+                    return true;
+                } else {
+                    return false;
+                }
+            },
             ready: function(){
                 this.list = [
                     {
