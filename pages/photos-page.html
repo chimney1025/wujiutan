@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="utf-8" name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>Photos</title>
-
-    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-
-    <link rel="import" href="elements/nav.html">
-    <link rel="import" href="elements/thumbnails.html">
-    <link rel="import" href="elements/footer.html">
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="/styles.css" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js"></script>
-
-</head>
-<body>
-<nav-element></nav-element>
+<link rel="import" href="../elements/thumbnails.html">
+<dom-module id="photos-page">
+<template>
+	<nav-element></nav-element>
 <div class="breadcrumbs">
     <div class="container">
         <h1 class="pull-left">在线体验 - 相册</h1>
@@ -54,7 +36,10 @@
     </div>
 </section>
 <footer-element></footer-element>
-<popup-content></popup-content>
-
-</body>
-</html>
+</template>
+<script>
+	Polymer({
+		is: 'photos-page'
+	});
+</script>
+</dom-module>
