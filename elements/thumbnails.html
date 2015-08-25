@@ -1,25 +1,12 @@
 ﻿<link rel="import" href="../bower_components/polymer/polymer.html">
 <dom-module id="thumbnail-list">
     <style>
-        .thumbnail-img{
-            overflow: hidden;
-            height: 145px;
-        }
-
-        .thumbnail h3 a{
-            color: #585f69;
-            font-size: 18px;
-        }
-
-        .thumbnail h3 a:hover{
-            color: #72c02c;
-            text-decoration: none;
-        }
     </style>
     <template>
         <template is="dom-repeat" items="{{list}}">
+			<template is="dom-if" if="{{showThis(index)}}">
             <div class="col-sm-6 col-md-3">
-                <template is="dom-if" if="{{caption}}">
+                <template is="dom-if" if="{{showCaption(caption)}}">
                     <div class="thumbnail">
                         <div class="thumbnail-img">
                             <img class="img-responsive" src="{{item.imgsrc}}" alt="">
@@ -31,13 +18,13 @@
                     </div>
                 </template>
 
-                <template is="dom-if" if="{{nocaption}}">
+                <template is="dom-if" if="{{!showCaption(caption)}}">
                     <a href="#" class="thumbnail">
                         <img src="{{item.imgsrc}}" alt="">
                     </a>
                 </template>
-
             </div>
+			</template>
         </template>
     </template>
     <script>
@@ -45,33 +32,86 @@
             is: 'thumbnail-list',
             properties: {
                 caption: {
-                    type: Boolean
+                    type: String
                 },
-                nocaption: {
-                    type: Boolean
-                }
+				count: {
+					type: Number,
+					value: 4
+				}
             },
+			showCaption: function(option){
+				if(option == "true"){
+					return true;
+				} else {
+					return false;
+				}
+			},
+			showThis: function(index){
+				if(index < this.count) {
+					return true;
+				} else {
+					return false;
+				}
+			},
             ready: function(){
-                console.log(this.caption);
-                console.log(this.nocaption);
                 this.list = [
                     {
-                        imgsrc: "http://www.thecarpeople.co.uk/content/images/blog/Entry_432/fb02de5b-a964-4836-8105-64af05e94006.jpg",
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img26.jpg",
                         title: "房车露营",
                         desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
                     },
                     {
-                        imgsrc: "http://www.therange.co.uk/blog/wp-content/uploads/2013/06/Easy-BBQ-Sauce-Recipe.jpg",
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img25.jpg",
                         title: "烧烤野餐",
                         desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
                     },
                     {
-                        imgsrc: "http://www.guilinly8.com/uploads/allimg/141224/141224103632.jpg",
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img24.jpg",
                         title: "摄影",
                         desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
                     },
                     {
-                        imgsrc: "http://file4.mafengwo.net/M00/4D/8F/wKgBm03HhgO5bf19AADB8GTjJAY50.jpeg",
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img23.jpg",
+                        title: "登山徒步",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img16.jpg",
+                        title: "房车露营",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img15.jpg",
+                        title: "烧烤野餐",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img14.jpg",
+                        title: "摄影",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img13.jpg",
+                        title: "登山徒步",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img22.jpg",
+                        title: "房车露营",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img21.jpg",
+                        title: "烧烤野餐",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img20.jpg",
+                        title: "摄影",
+                        desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+                    },
+                    {
+                        imgsrc: "http://htmlstream.com/preview/unify-v1.8/assets/img/main/img19.jpg",
                         title: "登山徒步",
                         desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
                     }

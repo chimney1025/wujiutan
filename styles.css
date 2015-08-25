@@ -30,7 +30,7 @@ a, a:focus, a:hover, a:active {
 section .container {
     margin-bottom: 50px;
     padding-top: 40px;
-    padding-bottom 40px:
+    padding-bottom: 40px:
 }
 
 .headline {
@@ -52,7 +52,7 @@ section .container {
     background-color: #555;
     background-image: url("http://startbootstrap.com/assets/img/bg.png");
     color: rgba(255, 255, 255, 0.8);
-    padding: 60px 15px;
+    padding: 100px 15px;
     position: relative;
     text-align: center;
 }
@@ -132,4 +132,80 @@ h2.title{
 
 .thumbnail, .pager li > a, .pager li > span {
     border-radius: 0;
+}
+
+
+        li.active a{
+            color: #777;
+            pointer-events: none;
+            cursor: default;
+        }
+		
+
+        .bg-footer{
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+		
+
+        .navbar-default{
+            margin: 0;
+            background: #fff none repeat scroll 0 0;
+            border-bottom: 2px solid #eee;
+            position: relative;
+            z-index: 99;
+        }
+        .navbar-nav{
+            float:right;
+        }
+		
+        .thumbnail-img{
+            overflow: hidden;
+            height: 145px;
+        }
+
+        .thumbnail h3 a{
+            color: #585f69;
+            font-size: 18px;
+        }
+
+        .thumbnail h3 a:hover{
+            color: #72c02c;
+            text-decoration: none;
+        }
+		
+		.service {
+		margin-bottom: 10px;
+    overflow: hidden;
+    padding: 15px 15px 10px;
+		}
+		
+		.service .service-icon {
+			color: #72c02c;
+    float: left;
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.4s ease-in-out 0s;
+		}
+		
+		.service .desc {
+		  overflow: hidden;
+    padding: 0 15px;
+		}
+		
+		.service .desc h4 {
+    font-size: 22px;
+    line-height: 25px;
+}
+		
+		.service:hover{
+		background: #fcfcfc none repeat scroll 0 0;
+    box-shadow: 0 0 5px #ddd;
+    transition: box-shadow 0.2s ease-in-out 0s;
+		}
+		
+		.service:hover i {
+    color: #656565;
 }

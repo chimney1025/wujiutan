@@ -3,17 +3,6 @@
 
     <style>
 
-        .navbar-default{
-            margin: 0;
-            background: #fff none repeat scroll 0 0;
-            border-bottom: 2px solid #eee;
-            position: relative;
-            z-index: 99;
-        }
-        .navbar-nav{
-            float:right;
-        }
-
     </style>
     <template>
         <nav class="navbar navbar-default">
@@ -31,9 +20,9 @@
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">{{item.name}}<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <template is="dom-repeat" items="{{ item.submenus }}">
+                                    <template is="dom-repeat" items="{{ item.submenus }}" as="submenu">
                                         <li>
-                                            <a href="{{item.url}}">{{item.name}}</a>
+                                            <a href="{{submenu.url}}">{{submenu.name}}</a>
                                         </li>
                                     </template>
                                 </ul>

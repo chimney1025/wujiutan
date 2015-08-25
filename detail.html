@@ -8,6 +8,7 @@
 
     <link rel="import" href="elements/nav.html">
     <link rel="import" href="elements/breadcrumb.html">
+    <link rel="import" href="elements/imageslider.html">
     <link rel="import" href="elements/thumbnails.html">
     <link rel="import" href="elements/footer.html">
 
@@ -23,9 +24,9 @@
 <nav-element></nav-element>
 <breadcrumb-element></breadcrumb-element>
 <section>
-    <div class="container content">
+    <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <h2 class="title">乌桕滩露营区</h2>
                 <div class="tag-box">
                     <p>乌桕滩是桂林市区处于漓江的一个河湾，位于竹江村河滩上的一片乌桕树林。百里漓江，江滩相连，春有风景如画的黄布滩，秋有红叶似火的乌桕滩。</p>
@@ -34,8 +35,8 @@
                 <a class="hover-effect btn btn-default" href="#">更多图片</a>
                 <a class="hover-effect btn btn-success" href="#">预订</a>
             </div>
-            <div class="col-md-6">
-                <img class="img-responsive" src="http://m1.img.srcdd.com/farm4/d/2012/1203/08/D95883172DC64A8A3181D613BF14EE36_B800_2400_750_499.JPEG" />
+            <div class="col-md-5">
+				<image-slider></image-slider>
             </div>
         </div>
     </div>
@@ -48,7 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <thumbnail-list caption="true" ></thumbnail-list>
+            <thumbnail-list caption="true" count=4></thumbnail-list>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
