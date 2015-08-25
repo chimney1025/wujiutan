@@ -1,0 +1,35 @@
+<dom-module id="error-page">
+<style>
+</style>
+<template>
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">Error Page</h1>
+        <ul class="pull-right breadcrumb">
+            <li>
+                <a href="#/home">首页</a>
+            </li>
+            <li class="active">Page not found</li>
+        </ul>
+    </div>
+</div>
+<section>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+				<h1>该页面不存在</h1>
+				<img src="http://seventhqueen.com/themes/kleo/wp-content/themes/kleo/assets/img/404_image.png" />
+            </div>
+        </div>
+		<div class="row">
+			<a class="clear-fix hover-effect btn btn-success" href="/#/home">返回首页</a>
+		</div>
+    </div>
+</section>
+</template>
+<script>
+	Polymer({
+		is: 'error-page'
+	});
+</script>
+</dom-module>

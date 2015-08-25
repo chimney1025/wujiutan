@@ -20,6 +20,8 @@
 
 </head>
 <body>
+
+<nav-element></nav-element>
 	<app-router>
     <!-- matches an exact path -->
     <app-route path="/home" import="/pages/home-page.html"></app-route>
@@ -31,10 +33,12 @@
     <app-route path="/photos" import="/pages/photos-page.html"></app-route>
 
     <!-- matches using a path variable -->
-    <app-route path="/pages/:id" import="/pages/detail-page.html"></app-route>
+    <app-route path="/pages/:name" import="/pages/detail-page.html"></app-route>
 
     <!-- matches everything else -->
-    <app-route path="*" import="/pages/home-page.html"></app-route>
+    <app-route path="*" import="/pages/error-page.html"></app-route>
   </app-router>
+
+<footer-element></footer-element>
 </body>
 </html>
