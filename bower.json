@@ -14,7 +14,9 @@
   ],
   "dependencies": {
     "app-router": "~2.6.1",
-    "polymer": "Polymer/polymer#^1.0.0",
-    "polymer-ui-elements": "Polymer/polymer-ui-elements#~0.3.0"
+    "bootstrap": "~3.3.5",
+    "bootstrap-material-design": "~0.3.0",
+    "components-font-awesome": "~4.4.0",
+    "polymer": "Polymer/polymer#^1.0.0"
   }
 }
