@@ -4,9 +4,17 @@
 
 <dom-module id="detail-page">
     <template>
+		<iron-ajax id="get_data"
+			auto
+			handle-as="json"
+			method="GET"
+			on-response="handleResponse"
+			on-error="handleErrorResponse"
+			debounce-duration="300"></iron-ajax>
+			
         <div class="breadcrumbs">
             <div class="container">
-                <h1 class="pull-left">{{showPageName(name)}}</h1>
+                <h1 class="pull-left">{{page.title}}</h1>
                 <ul class="pull-right breadcrumb">
                     <li class="">
                         <a href="">首页</a>
@@ -14,7 +22,7 @@
                     <li class="">
                         <a href="">主要项目</a>
                     </li>
-                    <li class="active">{{showPageName(name)}}</li>
+                    <li class="active">{{page.title}}</li>
                 </ul>
             </div>
         </div>
@@ -22,15 +30,15 @@
             <div class="container content">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="title">{{showPageName(name)}}</h2>
+                        <h2 class="title">{{page.title}}</h2>
                         <div class="well">
-                            <p>{{showPageDesc(name)}}</p>
+                            <p>{{page.content}}</p>
                         </div>
                         <a class="hover-effect btn btn-default" href="/#/photos">更多图片</a>
                         <a class="hover-effect btn btn-primary" href="#">预订</a>
                     </div>
                     <div class="col-md-6">
-                        <image-slider page="{{name}}"></image-slider>
+						<image-slider data={{page.images}}></image-slider>
                     </div>
                 </div>
             </div>
@@ -57,7 +65,10 @@
         Polymer({
             is: 'detail-page',
             properties: {
-                name: String
+                pageId: {
+					type: String,
+					value: ""
+				}
             },
             showPageName: function(id){
                 return (this.pages[id].name);
@@ -65,29 +76,17 @@
             showPageDesc: function(id){
                 return (this.pages[id].desc);
             },
+			handleResponse: function(data){
+				this.page = data.detail.response;
+			},
+			handleErrorResponse: function(err){
+				document.querySelector('app-router').go('/404');
+			},
+			attached: function(){
+				this.$.get_data.url = "http://private-ac876-wujiutan.apiary-mock.com/pages/" + this.pageId;
+				this.$.get_data.generateRequest();
+			},
             ready: function(){
-                this.pages = {
-                    wujiutan: {
-                        name: "乌桕滩露营区",
-                        desc: "乌桕滩是桂林市区处于漓江的一个河湾，位于竹江村河滩上的一片乌桕树林。百里漓江，江滩相连，春有风景如画的黄布滩，秋有红叶似火的乌桕滩。乌桕滩位于在漓江边上的一个大江滩，江滩上有一丛丛的乌桕林。每逢秋冬时节，树叶红透，三五处红叶，清澈的漓江流水，素有“小九寨沟”之美誉。秋冬时节的乌桕滩最能体现漓江的魅力风情，高处俯瞰乌桕滩，宛若一幅诗意盎然的水墨画。"
-                    },
-                    farm: {
-                        name: "生态农场",
-                        desc: "Morbi ac placerat nibh, in vestibulum odio cras vel orci non dolor sagittis sollicitudin et eu jeriu ntesque. Curabitur vitae augue"
-                    },
-                    healthy: {
-                        name: "健康生活",
-                        desc: "Morbi ac placerat nibh, in vestibulum odio cras vel orci non dolor sagittis sollicitudin et eu jeriu ntesque. Curabitur vitae augue"
-                    },
-                    holiday: {
-                        name: "休闲度假",
-                        desc: "Morbi ac placerat nibh, in vestibulum odio cras vel orci non dolor sagittis sollicitudin et eu jeriu ntesque. Curabitur vitae augue"
-                    },
-                    hiking: {
-                        name: "户外徒步",
-                        desc: "Morbi ac placerat nibh, in vestibulum odio cras vel orci non dolor sagittis sollicitudin et eu jeriu ntesque. Curabitur vitae augue"
-                    }
-                }
             }
         });
     </script>
