@@ -1,0 +1,49 @@
+<dom-module id="add-page">
+    <template>			
+        <div class="breadcrumbs">
+            <div class="container">
+                <h1 class="pull-left">添加页面</h1>
+                <ul class="pull-right breadcrumb">
+                    <li class="">
+                        <a href="">首页</a>
+                    </li>
+                    <li class="">
+                        <a href="">管理</a>
+                    </li>
+                    <li class="active">添加页面</li>
+                </ul>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form is="iron-form" id="form" method="post" action="">
+							<paper-input name="title" label="Page Title"></paper-input>
+							<paper-input name="uri" label="Page URI"></paper-input>
+							<paper-textarea label="Page Description"></paper-textarea>
+							<paper-button>Submit</paper-button>
+						</form>
+                    </div>
+                    <div class="col-md-6">
+						<image-slider data={{page.images}}></image-slider>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <script>
+        Polymer({
+            is: 'add-page',
+            properties: {
+                pageId: {
+					type: String,
+					value: ""
+				}
+            },
+            ready: function(){
+            }
+        });
+    </script>
+
+</dom-module>

@@ -8,6 +8,9 @@
 	<link rel="import" href="bower_components/polymer/polymer.html">
 	<link rel="import" href="bower_components/app-router/app-router.html">
 	<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+	<link rel="import" href="bower_components/iron-form/iron-form.html">
+	<link rel="import" href="bower_components/paper-input/paper-input.html">
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
 	<link rel="import" href="elements/nav.html">
 	<link rel="import" href="elements/footer.html">
 
@@ -38,7 +41,15 @@
     <app-route path="/photos" import="/pages/photos-page.html"></app-route>
 
     <!-- matches using a path variable -->
+    <app-route path="/pages" import="/pages/list-page.html"></app-route>
+
+    <!-- matches using a path variable -->
     <app-route path="/pages/:pageId" import="/pages/detail-page.html"></app-route>
+	
+	<!-- matches admin pages -->
+    <app-route path="/rabbit" import="/pages/admin-page.html"></app-route>
+    <app-route path="/rabbit/pages/add" import="/pages/add-page.html"></app-route>
+    <app-route path="/rabbit/pages/:pageId" import="/pages/edit-page.html"></app-route>
 
     <!-- matches everything else -->
     <app-route path="*" import="/pages/error-page.html"></app-route>
