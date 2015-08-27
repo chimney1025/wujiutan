@@ -40,7 +40,6 @@ section .container {
 }
 
 .headline h2, .headline h3, .headline h4{
-    border-bottom: 2px solid #009688;
     display: inline-block;
     margin: 0 0 -2px;
     padding-bottom: 5px;
@@ -110,21 +109,6 @@ h2.title{
     display: inline-block;
 }
 
-.tag-box{
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: #fafafa none repeat scroll 0 0;
-    border-color: #eee #eee #eee #009688;
-    border-image: none;
-    border-style: solid;
-    border-width: 0 0 0 2px;
-
-    margin-bottom: 30px;
-    padding: 20px;
-}
-
 .hover-effect {
     transition: all 0.2s ease-in-out 0s;
 }
@@ -169,7 +153,6 @@ li.active a{
 }
 
 .thumbnail h3 a:hover{
-    color: #009688;
     text-decoration: none;
 }
 
@@ -180,7 +163,6 @@ li.active a{
 }
 
 .service .service-icon {
-    color: #009688;
     float: left;
     font-size: 35px;
     padding: 10px;
