@@ -1,7 +1,21 @@
 <dom-module id="add-page">
+<style>
+    h2 {
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .inputs {
+      width: 80%;
+    }
+    .form-control-wrapper {
+      margin: 30px 0;
+    }
+</style>
     <template>			
         <div class="breadcrumbs">
             <div class="container">
+			
                 <h1 class="pull-left">添加页面</h1>
                 <ul class="pull-right breadcrumb">
                     <li class="">
@@ -12,21 +26,45 @@
                     </li>
                     <li class="active">添加页面</li>
                 </ul>
-            </div>
-        </div>
+			</div>
+		</div>
+  
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-10 col-md-offset-1 well">
                         <form is="iron-form" id="form" method="post" action="">
-							<paper-input name="title" label="Page Title"></paper-input>
-							<paper-input name="uri" label="Page URI"></paper-input>
-							<paper-textarea label="Page Description"></paper-textarea>
-							<paper-button>Submit</paper-button>
+							
+  <h1 class="header">添加页面</h1>
+  <div class="inputs">
+  <h2>Input</h2>
+  <input type="text" class="form-control" placeholder="label">
+  <input type="text" class="form-control floating-label" placeholder="floating label">
+
+  <h2>Textarea</h2>
+  <textarea class="form-control" placeholder="textarea label"></textarea>
+  <textarea class="form-control floating-label" placeholder="textarea floating label"></textarea>
+
+  <h2>Validation</h2>
+  <input type="email" class="form-control floating-label" placeholder="email">
+  <input type="number" class="form-control floating-label" placeholder="number">
+
+  <h2>Disabled</h2>
+  <input disabled="" type="text" class="form-control floating-label" placeholder="email">
+  <input disabled="" type="text" class="form-control floating-label" placeholder="number">
+
+  <h2>Hints</h2>
+  <input type="text" class="form-control floating-label" data-hint="Write here something cool" placeholder="label">
+  <input type="email" class="form-control floating-label" data-hint="A valid email should contain an @ symbol" placeholder="label">
+
+
+  <h2>Styling</h2>
+  <div class="form-group has-error">
+    <input type="text" class="form-control form-control-success" placeholder="label">
+    <input type="text" class="form-control form-control-success floating-label" placeholder="floating label">
+  </div>
+  </div>
 						</form>
-                    </div>
-                    <div class="col-md-6">
-						<image-slider data={{page.images}}></image-slider>
                     </div>
                 </div>
             </div>
