@@ -1,10 +1,11 @@
 @import "../bower_components/bootstrap-material-design/less/material-fullpalette.less";
 @import "_mixins-custom.less";
 
+@primary: @teal-300;
 @custom: @red-300;
 
 a, a:hover, a:focus {
-  color: @primary;
+  color: @custom;
 }
 
 .headline h2, .headline h3, .headline h4 {
@@ -12,11 +13,11 @@ a, a:hover, a:focus {
 }
 
 .thumbnail h3 a:hover, .service .service-icon{
-  color: @primary;
+  color: @custom;
 }
 
 a.thumbnail:hover{
-  border-color: @primary;
+  border-color: @custom;
 }
 
 .tag-box{
