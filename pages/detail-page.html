@@ -31,11 +31,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2 class="title">{{page.title}}</h2>
-                        <div class="">
+						
+                        <a class="hover-effect btn btn-primary" href="/#/photos">更多图片</a>
+                        <a class="hover-effect btn btn-custom" href="#">预订</a>
+						
+                        <div class="details">
                             <p>{{page.content}}</p>
                         </div>
-                        <a class="hover-effect btn btn-default" href="/#/photos">更多图片</a>
-                        <a class="hover-effect btn btn-primary" href="#">预订</a>
                     </div>
                     <div class="col-md-6">
 						<image-slider data={{page.images}}></image-slider>
