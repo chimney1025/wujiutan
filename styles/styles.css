@@ -1,178 +1,57 @@
-body {
-    font-family: "Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+    color: #444;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #555;
-    font-weight: normal;
-    margin-top: 5px;
-    text-shadow: none;
+p {
+    line-height: 2rem;
 }
 
-h2{
-    font-size: 24px;
-    line-height: 33px;
+.button-collapse {
+    color: #26a69a;
 }
 
-a, a:focus, a:hover, a:active {
-    outline: 0 none !important;
+.parallax-container {
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255,255,255,.9);
 }
-
-.btn {
-    border-radius: 0;
-}
-
-.image{
-    padding: 0 20px;
+.parallax-container .section {
     width: 100%;
 }
 
-section .container {
-    padding: 40px;
+@media only screen and (max-width : 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+    #index-banner .section {
+        top: 10%;
+    }
 }
 
-.headline {
-    border-bottom: 1px dotted #e4e9f0;
-    display: block;
-    margin: 10px 0 25px;
+@media only screen and (max-width : 600px) {
+    #index-banner .section {
+        top: 0;
+    }
 }
 
-.headline h2, .headline h3, .headline h4{
-    display: inline-block;
-    margin: 0 0 -2px;
-    padding-bottom: 5px;
-}
-
-.bg-header{
-    font-size: 24px;
-    text-align: left;
-    padding: 100px 15px;
-    position: relative;
-    text-align: center;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #eee;
-}
-
-.breadcrumbs{
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #eee;
-    overflow: hidden;
-    padding: 10px 0 6px;
-}
-
-.breadcrumbs h1{
-    color: #666;
-    font-size: 22px;
-    margin-top: 8px;
-}
-
-.breadcrumb{
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    padding-right: 0;
-    position: relative;
-    top: 10px;
-}
-
-.bg-grey{
-    background: #f7f7f7 none repeat scroll 0 0;
-    border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
-}
-
-.camera {
-    margin: 0 auto;
-}
-
-.camera img{
-    margin: 0 auto;
-}
-
-.camera-details strong{
-    min-width: 100px;
-    display: inline-block;
-}
-
-.hover-effect {
-    transition: all 0.2s ease-in-out 0s;
-}
-
-.thumbnail, .pager li > a, .pager li > span {
-    border-radius: 0;
-}
-
-
-li.active a{
-    color: #777;
-    pointer-events: none;
-    cursor: default;
-}
-
-
-.bg-footer{
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-
-.navbar-default{
-    margin: 0;
-    background: #fff none repeat scroll 0 0;
-    position: relative;
-    z-index: 99;
-}
-.navbar-nav{
-    float:right;
-}
-
-.thumbnail-img{
-    overflow: hidden;
-    height: 145px;
-}
-
-.thumbnail h3 a{
-    color: #585f69;
-    font-size: 18px;
-}
-
-.thumbnail h3 a:hover{
-    text-decoration: none;
-}
-
-.service {
-    margin-bottom: 10px;
-    overflow: hidden;
-    padding: 15px 15px 10px;
-}
-
-.service .service-icon {
-    float: left;
-    font-size: 35px;
-    padding: 10px;
-    text-align: center;
-    transition: all 0.4s ease-in-out 0s;
-}
-
-.service .desc {
-    overflow: hidden;
+.icon-block {
     padding: 0 15px;
 }
-
-.service .desc h4 {
-    font-size: 22px;
-    line-height: 25px;
+.icon-block .material-icons {
+    font-size: inherit;
 }
 
-.service:hover{
-    background: #fcfcfc none repeat scroll 0 0;
-    box-shadow: 0 0 5px #ddd;
-    transition: box-shadow 0.2s ease-in-out 0s;
-}
-
-.service:hover i {
-    color: #656565;
-}
-
-.content .details {
-	margin: 20px 0;
+footer.page-footer {
+    margin: 0;
 }

@@ -1,6 +1,7 @@
 <html>
 <head lang="en">
-    <meta charset="utf-8" name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>Index</title>
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
@@ -14,18 +15,11 @@
 	<link rel="import" href="elements/nav.html">
 	<link rel="import" href="elements/footer.html">
 
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="bower_components/bootstrap-material-design/dist/css/roboto.min.css" rel="stylesheet" type="text/css" />
-    <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet" type="text/css" />
-	
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="styles/materialize.css" rel="stylesheet" type="text/css" />
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
-    <link href="styles/custom-sass.css" rel="stylesheet" type="text/css" />
-	
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
-    <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -58,5 +52,19 @@
   </app-router>
 
 <footer-element></footer-element>
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/bin/materialize.js"></script>
+<script>
+    (function($){
+        $(function(){
+
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+</script>
 </body>
 </html>

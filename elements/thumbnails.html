@@ -1,15 +1,19 @@
 ﻿<link rel="import" href="../bower_components/polymer/polymer.html">
 <dom-module id="thumbnail-list">
     <style>
+        img {
+            width: 100%;
+            margin: 10px 0;
+        }
     </style>
     <template>
         <template is="dom-repeat" items="{{list}}">
             <template is="dom-if" if="{{showThis(index)}}">
-                <div class="col-sm-6 col-md-3">
+                <div class="col s6 col m3">
                     <template is="dom-if" if="{{showCaption(caption)}}">
                         <div class="thumbnail">
                             <div class="thumbnail-img">
-                                <img class="img-responsive" src="{{item.imgsrc}}" alt="">
+                                <img class="materialboxed" src="{{item.imgsrc}}" alt="">
                             </div>
                             <div class="caption">
                                 <h3><a class="hover-effect" href="#">{{item.title}}</a></h3>
@@ -52,6 +56,9 @@
                 } else {
                     return false;
                 }
+            },
+            attached: function(){
+                $('.materialboxed').materialbox();
             },
             ready: function(){
                 this.list = [

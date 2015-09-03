@@ -40,30 +40,43 @@ a.thumbnail:hover{
   border-color: $custom;
 }
 
+@import "../bower_components/bootstrap-material-design/sass/_shadows.scss";
 @import "../bower_components/bootstrap-material-design/sass/_mixins.scss";
 
 @mixin button-variant($color) {
-	color: $darkbg-text !important;
-    &:hover, &.active {
-		@include button-variant($color);
-	}
+  background-color: $color;
+  color: $darkbg-text !important;
+  &:hover:not(.btn-link) {
+    background-color: darken($color, 4%) !important;
+  }
+  &:active:not(.btn-link) {
+    background-color: darken($color, 4%) !important;
+  }
+  &.active:not(.btn-link) {
+    background-color: darken($color, 4%) !important;
+  }
+  &:focus:not(.btn-link) {
+    background-color: darken($color, 4%) !important;
+  }
+  &:visited:not(.btn-link) {
+    background-color: darken($color, 4%) !important;
+  }
 }
 
-@import "../bower_components/bootstrap-material-design/sass/_shadows.scss";
 @import "../bower_components/bootstrap-material-design/sass/_icons-material-design.scss";
 
 body {
-    background-color: #EEEEEE;
-    &.inverse {
-        background: #333333;
-        &, .form-control {
-            color: $darkbg-text;
-        }
+  background-color: #EEEEEE;
+  &.inverse {
+    background: #333333;
+    &, .form-control {
+      color: $darkbg-text;
     }
+  }
 }
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 // Well and Jumbotrons
@@ -79,22 +92,22 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 @import "../bower_components/bootstrap-material-design/sass/_inputs.scss";
 
 legend {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .modal-content {
-    @extend .shadow-z-2;
-    border-radius: 0;
-    border: 0;
-    .modal-header {
-        border-bottom: 0;
+  @extend .shadow-z-2;
+  border-radius: 0;
+  border: 0;
+  .modal-header {
+    border-bottom: 0;
+  }
+  .modal-footer {
+    border-top: 0;
+    .btn+.btn {
+      margin-bottom: 10px;
     }
-    .modal-footer {
-        border-top: 0;
-        .btn+.btn {
-            margin-bottom: 10px;
-        }
-    }
+  }
 }
 
 // Lists
@@ -104,19 +117,19 @@ legend {
 @import "../bower_components/bootstrap-material-design/sass/_navbar.scss";
 
 .dropdown-menu {
-	border: 0;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-	.divider {
-		background-color: rgba(229, 229, 229, 0.12);
-	}
-	li {
-		overflow: hidden;
-		position: relative;
-		a:hover {
-			background-color: transparent;
-			color: $primary;
-		}
-	}
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  .divider {
+    background-color: rgba(229, 229, 229, 0.12);
+  }
+  li {
+    overflow: hidden;
+    position: relative;
+    a:hover {
+      background-color: transparent;
+      color: $primary;
+    }
+  }
 }
 
 // Alerts
@@ -131,31 +144,31 @@ legend {
 $card-custom: $teal-50;
 $custom-text: $lightbg-text;
 .card-material-custom {
-    @include card-variant($card-custom, $custom-text, lighten($card-custom, 10%));
+  @include card-variant($card-custom, $custom-text, lighten($card-custom, 10%));
 }
 
 // Buttons
 @import "../bower_components/bootstrap-material-design/sass/_buttons.scss";
 
 .btn-custom {
-    @include button-variant($custom);
+  @include button-variant($custom);
 }
 
 // Typography
 .text-warning {
-    color: $btn-warning;
+  color: $btn-warning;
 }
 .text-primary {
-    color: $btn-primary;
+  color: $btn-primary;
 }
 .text-danger {
-    color: $btn-danger;
+  color: $btn-danger;
 }
 .text-success {
-    color: $btn-success;
+  color: $btn-success;
 }
 .text-info {
-    color: $btn-info;
+  color: $btn-info;
 }
 
 @import "../bower_components/bootstrap-material-design/sass/_tabs.scss";

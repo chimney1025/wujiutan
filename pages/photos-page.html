@@ -1,33 +1,27 @@
 <link rel="import" href="../elements/thumbnails.html">
 <dom-module id="photos-page">
     <template>
-        <div class="breadcrumbs">
-            <div class="container">
-                <h1 class="pull-left">在线体验 - 相册</h1>
-                <ul class="pull-right breadcrumb">
-                    <li>
-                        <a href="/#/home">首页</a>
-                    </li>
-                    <li class="active">在线体验 - 相册</li>
-                </ul>
-            </div>
-        </div>
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="title text-center">精选图片</h2>
+                    <div class="col s12">
+                        <h4 class="title text-center">精选图片</h4>
                     </div>
                 </div>
                 <div class="row">
                     <thumbnail-list caption="false" count=12></thumbnail-list>
                 </div>
-                <nav>
-                    <ul class="pager">
-                        <li class="previous disabled"><a class="hover-effect" href="#"><span aria-hidden="true">&larr;</span> 上一页</a></li>
-                        <li class="next"><a class="hover-effect" href="#">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+                <div class="row">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li>
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
         </section>
         <section class="bg-grey">

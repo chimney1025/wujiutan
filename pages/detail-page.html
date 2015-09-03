@@ -11,57 +11,21 @@
 			on-response="handleResponse"
 			on-error="handleErrorResponse"
 			debounce-duration="300"></iron-ajax>
-			
-        <div class="breadcrumbs">
-            <div class="container">
-                <h1 class="pull-left">{{page.title}}</h1>
-                <ul class="pull-right breadcrumb">
-                    <li class="">
-                        <a href="">首页</a>
-                    </li>
-                    <li class="">
-                        <a href="">主要项目</a>
-                    </li>
-                    <li class="active">{{page.title}}</li>
-                </ul>
+
+        <div class="container">
+            <div class="section">
+                <div class="row">
+                    <div class="col s6">
+                        <h4>{{page.title}}</h4>
+                        <p class="left-align light">{{page.content}}</p>
+                    </div>
+                    <div class="col s6">
+                        <image-slider data={{page.images}}></image-slider>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <section>
-            <div class="container content">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="title">{{page.title}}</h2>
-						
-                        <a class="btn btn-primary hover-effect" href="/#/photos">更多图片</a>
-                        <a class="btn btn-custom hover-effect " href="#">预订</a>
-						
-                        <div class="details">
-                            <p>{{page.content}}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-						<image-slider data={{page.images}}></image-slider>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-grey">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="title text-center">推荐活动</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <thumbnail-list caption="true" count=4></thumbnail-list>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <a class="btn btn-primary hover-effect">查看更多活动</a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </template>
     <script>
         Polymer({
