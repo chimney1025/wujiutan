@@ -41,6 +41,14 @@ a.thumbnail:hover{
 }
 
 @import "../bower_components/bootstrap-material-design/sass/_mixins.scss";
+
+@mixin button-variant($color) {
+	color: $darkbg-text !important;
+    &:hover, &.active {
+		@include button-variant($color);
+	}
+}
+
 @import "../bower_components/bootstrap-material-design/sass/_shadows.scss";
 @import "../bower_components/bootstrap-material-design/sass/_icons-material-design.scss";
 
@@ -60,13 +68,6 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 // Well and Jumbotrons
 @import "../bower_components/bootstrap-material-design/sass/_welljumbo.scss";
-
-// Buttons
-@import "../bower_components/bootstrap-material-design/sass/_buttons.scss";
-
-.btn-custom {
-    @include button-variant($custom);
-}
 
 // Checkboxes
 @import "../bower_components/bootstrap-material-design/sass/_checkboxes.scss";
@@ -103,18 +104,19 @@ legend {
 @import "../bower_components/bootstrap-material-design/sass/_navbar.scss";
 
 .dropdown-menu {
-    border: 0;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    .divider {
-        background-color: rgba(229, 229, 229, 0.12);
-    }
-    li {
-        overflow: hidden;
-        position: relative;
-        a:hover {
-            background: rgba(0,0,0,0.08);
-        }
-    }
+	border: 0;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	.divider {
+		background-color: rgba(229, 229, 229, 0.12);
+	}
+	li {
+		overflow: hidden;
+		position: relative;
+		a:hover {
+			background-color: transparent;
+			color: $primary;
+		}
+	}
 }
 
 // Alerts
@@ -130,6 +132,13 @@ $card-custom: $teal-50;
 $custom-text: $lightbg-text;
 .card-material-custom {
     @include card-variant($card-custom, $custom-text, lighten($card-custom, 10%));
+}
+
+// Buttons
+@import "../bower_components/bootstrap-material-design/sass/_buttons.scss";
+
+.btn-custom {
+    @include button-variant($custom);
 }
 
 // Typography
