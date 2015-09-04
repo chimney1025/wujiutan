@@ -51,7 +51,10 @@
 </template>
 <script>
 	Polymer({
-		is: 'camera-page'
+		is: 'camera-page',
+        attached: function(){
+            $('.materialboxed').materialbox();
+        }
 	});
 </script>
 </dom-module>
