@@ -1,4 +1,4 @@
-﻿<link rel="import" href="../bower_components/polymer/polymer.html">
+﻿<link rel="import" href="../../bower_components/polymer/polymer.html">
 <dom-module id="thumbnail-list">
     <style>
         img {
@@ -16,16 +16,14 @@
                                 <img class="materialboxed" src="{{item.imgsrc}}" alt="">
                             </div>
                             <div class="caption">
-                                <h3><a class="hover-effect" href="#">{{item.title}}</a></h3>
+                                <h3><a class="hover-effect" href="javascript:void(0)">{{item.title}}</a></h3>
                                 <p>{{item.desc}}</p>
                             </div>
                         </div>
                     </template>
 
                     <template is="dom-if" if="{{!showCaption(caption)}}">
-                        <a href="#" class="thumbnail">
-                            <img src="{{item.imgsrc}}" alt="">
-                        </a>
+                        <img class="materialboxed" src="{{item.imgsrc}}" alt="">
                     </template>
                 </div>
             </template>

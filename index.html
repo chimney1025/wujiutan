@@ -9,17 +9,14 @@
 	<link rel="import" href="bower_components/polymer/polymer.html">
 	<link rel="import" href="bower_components/app-router/app-router.html">
 	<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
-	<link rel="import" href="bower_components/iron-form/iron-form.html">
-	<link rel="import" href="bower_components/paper-input/paper-input.html">
-	<link rel="import" href="bower_components/paper-button/paper-button.html">
-	<link rel="import" href="elements/nav.html">
-	<link rel="import" href="elements/footer.html">
+	<link rel="import" href="templates/elements/nav.html">
+	<link rel="import" href="templates/elements/footer.html">
 
     <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="styles/materialize.css" rel="stylesheet" type="text/css" />
-    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="sources/styles/materialize.css" rel="stylesheet" type="text/css" />
+    <link href="sources/styles/styles.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -27,44 +24,32 @@
 <nav-element></nav-element>
 	<app-router>
     <!-- matches an exact path -->
-    <app-route path="/" import="/pages/home-page.html"></app-route>
-    <app-route path="/home" import="/pages/home-page.html"></app-route>
+    <app-route path="/" import="/templates/pages/home-page.html"></app-route>
+    <app-route path="/home" import="/templates/pages/home-page.html"></app-route>
 
     <!-- matches using a wildcard -->
-    <app-route path="/camera" import="/pages/camera-page.html"></app-route>
+    <app-route path="/camera" import="/templates/pages/camera-page.html"></app-route>
 
     <!-- matches using a wildcard -->
-    <app-route path="/photos" import="/pages/photos-page.html"></app-route>
+    <app-route path="/photos" import="/templates/pages/photos-page.html"></app-route>
 
     <!-- matches using a path variable -->
-    <app-route path="/pages" import="/pages/list-page.html"></app-route>
+    <app-route path="/pages" import="/templates/pages/list-page.html"></app-route>
 
     <!-- matches using a path variable -->
-    <app-route path="/pages/:pageId" import="/pages/detail-page.html"></app-route>
+    <app-route path="/pages/:pageId" import="/templates/pages/detail-page.html"></app-route>
 	
 	<!-- matches admin pages -->
-    <app-route path="/rabbit" import="/pages/admin-page.html"></app-route>
-    <app-route path="/rabbit/pages/add" import="/pages/add-page.html"></app-route>
-    <app-route path="/rabbit/pages/:pageId" import="/pages/edit-page.html"></app-route>
+    <app-route path="/rabbit/pages/add" import="/templates/pages/add-page.html"></app-route>
 
     <!-- matches everything else -->
-    <app-route path="*" import="/pages/error-page.html"></app-route>
+    <app-route path="*" import="/templates/pages/error-page.html"></app-route>
   </app-router>
 
 <footer-element></footer-element>
 
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="js/bin/materialize.js"></script>
-<script>
-    (function($){
-        $(function(){
-
-            $('.button-collapse').sideNav();
-            $('.parallax').parallax();
-
-        }); // end of document ready
-    })(jQuery); // end of jQuery name space
-</script>
+<script src="sources/js/bin/materialize.js"></script>
 </body>
 </html>

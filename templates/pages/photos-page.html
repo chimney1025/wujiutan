@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <h4 class="title text-center">精选图片</h4>
+                        <h4 class="title center">精选图片</h4>
                     </div>
                 </div>
                 <div class="row">
@@ -31,7 +31,10 @@
     </template>
     <script>
         Polymer({
-            is: 'photos-page'
+            is: 'photos-page',
+			attached: function(){
+                $('.materialboxed').materialbox();
+			}
         });
     </script>
 </dom-module>

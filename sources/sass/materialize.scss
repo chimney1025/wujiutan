@@ -36,3 +36,11 @@
 @import "components/date_picker/default.scss";
 @import "components/date_picker/default.date.scss";
 @import "components/date_picker/default.time.scss";
+
+.side-nav {
+	.collapsible {
+		li {
+			&:hover, &.active { background-color: rgba(0, 0, 0, 0.05); }
+		}
+	}
+}

@@ -1,0 +1,146 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="nav-element">
+
+    <style>
+
+    </style>
+    <template>
+        <nav class="white" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="brandname" href="#/home" class="brand-logo">Logo</a>
+                <ul class="right hide-on-med-and-down">
+                    <template is="dom-repeat" items="{{ mainmenus }}">
+						<template is="dom-if" if="{{haveSubMenus(item)}}">
+							<li>
+								<a class="dropdown-button" name="{{getDropdownId(index)}}" href="javascript:void(0)" >{{item.name}}<i class="material-icons right">arrow_drop_down</i></a>
+							</li>
+							<ul id="{{getDropdownId(index)}}" class="dropdown-content">
+								<template is="dom-repeat" items="{{ item.submenus }}">
+									<li>
+										<a href="{{item.path}}">{{item.name}}</a>
+									</li>
+								</template>
+							</ul>
+						</template>
+						<template is="dom-if" if="{{!haveSubMenus(item)}}">
+							<li>
+								<a href="{{item.path}}">{{item.name}}</a>
+							</li>
+						</template>
+                    </template>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <template is="dom-repeat" items="{{ mainmenus }}">
+						<template is="dom-if" if="{{haveSubMenus(item)}}">
+							<li>
+								<ul class="collapsible collapsible-accordion">
+									<li class="bold">
+										<a class="collapsible-header waves-effect" href="javascript:void(0)" >{{item.name}}</a>
+										<div class="collapsible-body">
+											<ul>
+											<template is="dom-repeat" items="{{ item.submenus }}">
+											<li>
+												<a href="{{item.path}}">{{item.name}}</a>
+											</li>
+											</template>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</template>
+						<template is="dom-if" if="{{!haveSubMenus(item)}}">
+							<li class="bold">
+								<a class="collapsible-header waves-effect waves-teal" href="{{item.path}}">{{item.name}}</a>
+							</li>
+						</template>
+                    </template>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </template>
+    <script>
+        Polymer({
+            is: 'nav-element',
+			getDropdownId: function(index){
+				var id = "dropdown" + index.toString();
+				return id;
+			},
+			haveSubMenus: function(obj){
+				if(obj.submenus) {
+					return true;
+				} else {
+					return false;
+				}
+			},
+			attached: function(){
+				if(document.querySelector('a.dropdown-button')){
+					//set attribute data-activities for 'dropdown-button'
+					var divs = document.querySelectorAll('a.dropdown-button');
+					
+					for(var i=0; i<divs.length; i++){
+						divs[i].setAttribute("data-activates", divs[i].name);
+					};
+				}
+				$(".dropdown-button").dropdown();
+				
+				$('.button-collapse').sideNav();
+				
+				$('.collapsible').collapsible({
+					accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+				});
+			},
+            ready: function(){
+                this.$.brandname.textContent = "Logo";
+                this.$.brandname.href="/#/home";
+                this.mainmenus = [
+                    {
+                        name: "主要项目",
+                        submenus: [
+                            {
+                                name: "乌桕滩露营区",
+                                path: "/#/pages/wujiutan"
+                            },
+                            {
+                                name: "生态农场",
+                                path: "/#/pages/farm"
+                            },
+                            {
+                                name: "健康生活",
+                                path: "https://www.muicss.com/docs/v1/css-js/forms"
+                            },
+                            {
+                                name: "休闲度假",
+                                path: "http://materializecss.com/mobile.html"
+                            },
+                            {
+                                name: "户外徒步",
+                                path: "/#/rabbit/pages/add"
+                            }
+                        ]
+                    },
+                    {
+                        name: "在线体验",
+                        submenus: [
+                            {
+                                name: "实时监控",
+                                path: "/#/camera"
+                            },
+                            {
+                                name: "相册",
+                                path: "/#/photos"
+                            }
+                        ]
+                    },
+                    {
+                        name: "管理平台",
+                        path: "/#/rabbit/pages/add"
+                    }
+                ];
+            }
+        });
+    </script>
+</dom-module>
+
