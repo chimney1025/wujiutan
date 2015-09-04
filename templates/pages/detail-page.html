@@ -21,11 +21,7 @@
                         <p class="left-align light">{{page.content}}</p>
                     </div>
                     <div class="col s12 m6">
-                        <image-slider>
-							<template is="dom-repeat" items="{{page.images}}">
-								<img src="{{item.imgsrc}}" />
-							</template>
-						</image-slider>
+                        <image-slider data="{{page.images}}"></image-slider>
                     </div>
                 </div>
 
@@ -39,22 +35,26 @@
                 pageId: {
 					type: String,
 					value: ""
-				}
-            },
-            showPageName: function(id){
-                return (this.pages[id].name);
-            },
-            showPageDesc: function(id){
-                return (this.pages[id].desc);
+				},
+                pathToId: {
+                    type: Object,
+                    value: {
+                        wujiutan: "id1",
+                        farm: "id2"
+                    }
+                }
+
             },
 			handleResponse: function(data){
 				this.page = data.detail.response;
+                $('.slider').slider({height: 300});
 			},
 			handleErrorResponse: function(err){
 				document.querySelector('app-router').go('/404');
 			},
 			attached: function(){
-				this.$.get_data.url = "http://private-ac876-wujiutan.apiary-mock.com/pages/" + this.pageId;
+				this.$.get_data.url = "http://testbackend.elasticbeanstalk.com/v1/modules/" + this.pathToId[this.pageId];
+                //this.$.get_data.url = "http://private-ac876-wujiutan.apiary-mock.com/pages/" + this.pageId;
 				this.$.get_data.generateRequest();
 			},
             ready: function(){
