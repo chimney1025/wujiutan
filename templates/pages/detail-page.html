@@ -21,7 +21,11 @@
                         <p class="left-align light">{{page.content}}</p>
                     </div>
                     <div class="col s12 m6">
-                        <image-slider data={{page.images}}></image-slider>
+                        <image-slider>
+							<template is="dom-repeat" items="{{page.images}}">
+								<img src="{{item.imgsrc}}" />
+							</template>
+						</image-slider>
                     </div>
                 </div>
 
