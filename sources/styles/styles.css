@@ -22,6 +22,9 @@ nav .brand-logo {
     color: #444;
 }
 
+nav{
+}
+
 li.bold > a {
 	font-weight: bold;
 }

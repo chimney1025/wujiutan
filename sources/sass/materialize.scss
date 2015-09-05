@@ -44,3 +44,13 @@
 		}
 	}
 }
+
+.breadcrumb {
+  ul {
+    li {
+      a {
+        color: $secondary-color;
+      }
+    }
+  }
+}

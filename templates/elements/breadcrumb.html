@@ -1,14 +1,26 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
 <dom-module id="breadcrumb-element">
 
     <style>
+        .breadcrumb{
+            overflow: hidden;
+            margin: 0 0 10px 0;
+        }
+        .breadcrumb ul li{
+            float: left;
+        }
+        .breadcrumb ul li:after{
+            content: ' > ';
+        }
+        .breadcrumb ul li:last-child:after{
+            content: '';
+        }
+
 
     </style>
     <template>
-        <div class="breadcrumbs">
+        <div class="breadcrumb teal lighten-5">
             <div class="container">
-                <h1 id="title" class="pull-left"></h1>
-                <ul class="pull-right breadcrumb">
+                <ul class="right">
                     <template is="dom-repeat" items="{{path}}">
                         <li class$="{{item.style}}">
                         <a href="{{item.url}}">{{item.name}}</a>
@@ -22,7 +34,6 @@
         Polymer({
             is: 'breadcrumb-element',
             ready: function(){
-                this.$.title.textContent = "乌桕滩露营区";
                 this.path = [
                     {
                         name: "首页",
@@ -33,11 +44,6 @@
                         name: "主要项目",
                         url: "",
                         style: ""
-                    },
-                    {
-                        name: "乌桕滩露营区",
-                        url: "",
-                        style: "active"
                     }
                 ];
             }

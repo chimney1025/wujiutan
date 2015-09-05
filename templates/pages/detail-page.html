@@ -12,11 +12,16 @@
 			on-error="handleErrorResponse"
 			debounce-duration="300"></iron-ajax>
 
+        <breadcrumb-element></breadcrumb-element>
         <div class="container">
             <div class="section">
                 <div class="row">
-                    <div class="col s12 m6">
+                    <div class="col s12">
                         <h4>{{page.title}}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
 						<a class="waves-effect waves-light btn red lighten-2">预订</a>
                         <p class="left-align light">{{page.content}}</p>
                     </div>
@@ -43,7 +48,6 @@
                         farm: "id2"
                     }
                 }
-
             },
 			handleResponse: function(data){
 				this.page = data.detail.response;

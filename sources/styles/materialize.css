@@ -8282,4 +8282,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .side-nav .collapsible li:hover, .side-nav .collapsible li.active {
   background-color: rgba(0, 0, 0, 0.05); }
 
+.breadcrumb ul li a {
+  color: #26a69a; }
+
 /*# sourceMappingURL=materialize.css.map */

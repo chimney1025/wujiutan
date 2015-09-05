@@ -1,0 +1,74 @@
+<dom-module id="admin-dashboard">
+    <style>
+        a{
+            margin: 5px;
+        }
+    </style>
+    <template>
+        <breadcrumb-element></breadcrumb-element>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h4>管理平台</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                    <div class="collection">
+                        <template is="dom-repeat" items="{{options}}">
+                            <a href="javascript:void(0)" on-click="loadElement" class="collection-item">{{item.name}}</a>
+                        </template>
+                    </div>
+                </div>
+                <div class="col s9">
+                    <div id="container"></div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'admin-dashboard',
+            properties: {
+                options: {
+                    type: Array,
+                    value: [{
+                        name: "页面管理",
+                        url: ""
+                    },{
+                        name: "添加页面",
+                        path: "/templates/pages/add-page.html",
+                        element: "add-page"
+                    },{
+                        name: "图片管理",
+                        url: ""
+                    },{
+                        name: "添加图片",
+                        url: ""
+                    },{
+                        name: "视频管理",
+                        url: ""
+                    },{
+                        name: "用户管理",
+                        url: ""
+                    }]
+                }
+            },
+            loadElement: function(e){
+                var obj = e.model.item;
+
+                this.importHref(obj.path, function(e) {
+                    // e.target.import is the import document.
+                    var newElement = document.createElement(obj.element);
+
+                    Polymer.dom(this.$.container).appendChild(newElement);
+                }, function(e) {
+                    // loading error
+                });
+            },
+            ready: function(){
+            }
+        });
+    </script>
+
+</dom-module>

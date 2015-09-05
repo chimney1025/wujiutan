@@ -6,11 +6,11 @@
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
-	<link rel="import" href="bower_components/polymer/polymer.html">
-	<link rel="import" href="bower_components/app-router/app-router.html">
-	<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
-	<link rel="import" href="templates/elements/nav.html">
-	<link rel="import" href="templates/elements/footer.html">
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/app-router/app-router.html">
+    <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+    <link rel="import" href="templates/elements/nav.html">
+    <link rel="import" href="templates/elements/footer.html">
 
     <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
@@ -22,7 +22,7 @@
 <body>
 
 <nav-element></nav-element>
-	<app-router>
+<app-router>
     <!-- matches an exact path -->
     <app-route path="/" import="/templates/pages/home-page.html"></app-route>
     <app-route path="/home" import="/templates/pages/home-page.html"></app-route>
@@ -38,13 +38,14 @@
 
     <!-- matches using a path variable -->
     <app-route path="/pages/:pageId" import="/templates/pages/detail-page.html"></app-route>
-	
-	<!-- matches admin pages -->
-    <app-route path="/rabbit/pages/add" import="/templates/pages/add-page.html"></app-route>
+
+    <!-- matches admin pages -->
+
+    <app-route path="/rabbit/dashboard" import="/templates/pages/admin-dashboard.html"></app-route>
 
     <!-- matches everything else -->
     <app-route path="*" import="/templates/pages/error-page.html"></app-route>
-  </app-router>
+</app-router>
 
 <footer-element></footer-element>
 
