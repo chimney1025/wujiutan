@@ -1,0 +1,56 @@
+<dom-module id="related-element">
+<template>
+
+
+        <iron-ajax id="getdata"
+                auto
+                url="/data/articles.json"
+                method="GET"
+                handle-as="json"
+                on-response="handleResponse"
+                debounce-duration="300"></iron-ajax>
+                
+            <div class="index-heading">
+                <h2>相关阅读</h2>
+            </div>
+			<template is="dom-repeat" items="{{articles}}">
+            <div class="card col-md-4 col-sm-6">
+                <a href$="{{getHref(item.id)}}">
+                    <div class="bg">
+                        <img src="{{item.thumbnail}}" alt="...">
+                    </div>
+                        <div class="caption">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.description}}</p>
+                        </div>
+                </a>
+            </div>
+            </template>
+</template>
+
+<script>
+    Polymer({
+        is: "related-element",
+        properties: {
+            articleId: {
+                type: String
+            },
+            articles: {
+                type: Array
+            }
+        },
+            handleResponse: function(data) {
+                this.articles = data.detail.response.result;
+            },
+        getHref: function(id) {
+            if(id) {
+                return "#/themes/" + id;
+            } else {
+                return "#/themes" ;
+            }
+        },
+        attached: function() {
+        }
+    });
+</script>
+</dom-module>

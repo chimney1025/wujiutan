@@ -1,56 +1,88 @@
-<html>
-<head lang="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>Index</title>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Vagabond Adventure">
+    <meta name="author" content="Haoli Qu">
+
+    <title>Blog</title>
+    
+    <!-- Web Components -->
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-
+    
+    <!-- Polymer -->
     <link rel="import" href="bower_components/polymer/polymer.html">
+    
+    <!-- App Router -->
     <link rel="import" href="bower_components/app-router/app-router.html">
+
+    <!-- Iron elements-->
     <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
-    <link rel="import" href="templates/elements/nav.html">
-    <link rel="import" href="templates/elements/footer.html">
 
-    <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Custom Elements -->
+    <link rel="import" href="elements/nav-element.html">
+    <link rel="import" href="elements/footer-element.html">
+    <link rel="import" href="elements/slider-element.html">
+    <link rel="import" href="elements/related-element.html">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="sources/styles/materialize.css" rel="stylesheet" type="text/css" />
-    <link href="sources/styles/styles.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/clean-blog.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Fontello Fonts -->
+    <link href='assets/css/fontello.css' rel='stylesheet'>
 
 </head>
+
 <body>
-
-<nav-element></nav-element>
-<app-router>
-    <!-- matches an exact path -->
-    <app-route path="/" import="/templates/pages/home-page.html"></app-route>
-    <app-route path="/home" import="/templates/pages/home-page.html"></app-route>
-
-    <!-- matches using a wildcard -->
-    <app-route path="/camera" import="/templates/pages/camera-page.html"></app-route>
-
-    <!-- matches using a wildcard -->
-    <app-route path="/photos" import="/templates/pages/photos-page.html"></app-route>
-
-    <!-- matches using a path variable -->
-    <app-route path="/pages" import="/templates/pages/list-page.html"></app-route>
-
-    <!-- matches using a path variable -->
-    <app-route path="/pages/:pageId" import="/templates/pages/detail-page.html"></app-route>
-
-    <!-- matches admin pages -->
-
-    <app-route path="/rabbit/dashboard" import="/templates/pages/admin-dashboard.html"></app-route>
-
-    <!-- matches everything else -->
-    <app-route path="*" import="/templates/pages/error-page.html"></app-route>
-</app-router>
-
-<footer-element></footer-element>
-
-
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="sources/js/bin/materialize.js"></script>
+    <app-router>
+        <app-route path="/" import="/pages/home-page.html"></app-route>
+        <app-route path="/home" import="/pages/home-page.html"></app-route>
+        <app-route path="/about" import="/pages/about-page.html"></app-route>
+        <app-route path="/booking" import="/pages/form-page.html"></app-route>
+        <app-route path="/themes" import="/pages/article-list-page.html"></app-route>
+        <app-route path="/themes/:id" import="/pages/article-page.html"></app-route>
+        <app-route path="*" import="/pages/not-found-page.html"></app-route>
+    </app-router>
 </body>
+
+
+<!-- jQuery -->
+<script src="assets/js/jquery.js"></script>
+
+<!-- Underscore JavaScript -->
+<script src="assets/js/underscore-min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="assets/js/clean-blog.min.js"></script>
+<script src="assets/js/fast-click.min.js"></script>
+<script src="assets/js/moment.js"></script>
+<script src="assets/js/daterangepicker.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/slider.js"></script>
+<script src="assets/js/smooth-scroll.min.js"></script>
+<script>
+    var attachFastClick = Origami.fastclick;
+    attachFastClick(document.body);
+            
+    smoothScroll.init();
+    
+    window.scrollTo(0, 0);
+</script>
+
 </html>

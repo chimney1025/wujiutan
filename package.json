@@ -1,0 +1,29 @@
+{
+    "name": "escapade",
+    "version": "0.0.1-SNAPSHOT",
+    "description": "Website Escapade",
+    "main": "index.html",
+    "dependencies": {
+        "bower": "^1.5.2",
+        "http-server": "^0.8.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "http-server -p $PORT",
+        "postinstall": "./node_modules/bower/bin/bower install",
+        "test": "http-server -p 8080"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/escapade-travel/escapade.git"
+    },
+    "keywords": [
+        "Travel"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/escapade-travel/escapade/issues"
+    },
+    "homepage": "https://github.com/escapade-travel/escapade#readme"
+}
