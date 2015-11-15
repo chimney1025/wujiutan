@@ -3,42 +3,42 @@
         {
             "id": 1,
             "thumbnail": "/assets/img/article1_small.jpg",
-            "title": "游览《唐顿庄园》中的乡村! ",
+            "title": "乌桕滩山水观光露营区",
             "tags": ["历史", "自然"],
             "description": "如果您是《唐顿庄园》迷，那么来看看这部连续剧的拍摄地吧！ "
         },
         {
             "id": 2,
             "thumbnail": "/assets/img/article2_small.jpg",
-            "title": "有故事的教堂 ",
+            "title": "滨江休闲农业园",
             "tags": ["历史", "艺术", "宗教"],
             "description": "英国教堂探秘 "
         },
         {
             "id": 3,
             "thumbnail": "/assets/img/article3_small.jpg",
-            "title": "冬日旅游创意 ",
+            "title": "田园休闲区",
             "tags": ["自然", "文化"],
             "description": "在英国最温馨的旅游景点尽享冬日里的温暖"
         },
         {
             "id": 4,
             "thumbnail": "/assets/img/article4_small.jpg",
-            "title": "英国城堡",
+            "title": "精品体验区",
             "tags": ["历史", "艺术", "宗教"],
             "description": "令人瞩目的位置，丰富的历史掌故 "
         },
         {
             "id": 5,
             "thumbnail": "/assets/img/article5_small.jpg",
-            "title": "电影中的英国",
+            "title": "温泉度假酒店区",
             "tags": ["电影", "艺术"],
             "description": "英国是一处宏大而优美的电影取景地。 "
         },
         {
             "id": 6,
             "thumbnail": "/assets/img/article6_small.jpg",
-            "title": "莎士比亚的英格兰",
+            "title": "动迁小区",
             "tags": ["历史", "艺术", "文学", "电影"],
             "description": "走近大师"
         }

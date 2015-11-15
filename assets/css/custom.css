@@ -139,6 +139,10 @@ body {
         color: #fff;
     }
 
+    .navbar-right {
+        margin-right: 0;
+    }
+
     .intro-header {
         margin-top: 0;
     }
