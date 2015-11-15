@@ -2,45 +2,38 @@
     "result": [
         {
             "id": 1,
-            "thumbnail": "/assets/img/article1_small.jpg",
+            "thumbnail": "https://snap-photos.s3.amazonaws.com/img-thumbs/960w/76SAPG8IG4.jpg",
             "title": "乌桕滩山水观光露营区",
             "tags": ["历史", "自然"],
             "description": "如果您是《唐顿庄园》迷，那么来看看这部连续剧的拍摄地吧！ "
         },
         {
             "id": 2,
-            "thumbnail": "/assets/img/article2_small.jpg",
+            "thumbnail": "https://snap-photos.s3.amazonaws.com/img-thumbs/960w/THN6VCGM6X.jpg",
             "title": "滨江休闲农业园",
             "tags": ["历史", "艺术", "宗教"],
             "description": "英国教堂探秘 "
         },
         {
             "id": 3,
-            "thumbnail": "/assets/img/article3_small.jpg",
+            "thumbnail": "https://snap-photos.s3.amazonaws.com/img-thumbs/960w/R0BZTCYBM6.jpg",
             "title": "田园休闲区",
             "tags": ["自然", "文化"],
             "description": "在英国最温馨的旅游景点尽享冬日里的温暖"
         },
         {
             "id": 4,
-            "thumbnail": "/assets/img/article4_small.jpg",
+            "thumbnail": "https://snap-photos.s3.amazonaws.com/img-thumbs/960w/3G14PXUMCO.jpg",
             "title": "精品体验区",
             "tags": ["历史", "艺术", "宗教"],
             "description": "令人瞩目的位置，丰富的历史掌故 "
         },
         {
             "id": 5,
-            "thumbnail": "/assets/img/article5_small.jpg",
+            "thumbnail": "https://snap-photos.s3.amazonaws.com/img-thumbs/960w/904EAD50B0.jpg",
             "title": "温泉度假酒店区",
             "tags": ["电影", "艺术"],
             "description": "英国是一处宏大而优美的电影取景地。 "
-        },
-        {
-            "id": 6,
-            "thumbnail": "/assets/img/article6_small.jpg",
-            "title": "动迁小区",
-            "tags": ["历史", "艺术", "文学", "电影"],
-            "description": "走近大师"
         }
     ]
 }

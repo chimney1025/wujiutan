@@ -1,4 +1,7 @@
-var Slider = function(id) {
+var Slider = function(option) {
+    var id = option.id;
+    var time = option.time || 3000;
+
 	var index = 0;
 	var slider = document.getElementById(id);
 	var allSlides = slider.querySelectorAll('.slide');
@@ -37,7 +40,7 @@ var Slider = function(id) {
     
     return {
         start: function() {
-            timer = setInterval(showNext, 2500);
+            timer = setInterval(showNext, time);
         },
         stop: function() {
             clearInterval(timer);

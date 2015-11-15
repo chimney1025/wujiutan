@@ -131,11 +131,11 @@ body {
 @media only screen and (min-width: 769px) {
     
     .navbar-custom {
-        background: transparent;
+        background: #333333;
     }
 
     .navbar-custom .navbar-brand,
-    .navbar-custom .nav li a {
+    .navbar-custom .navbar-right > li > a {
         color: #fff;
     }
 
@@ -144,7 +144,6 @@ body {
     }
 
     .intro-header {
-        margin-top: 0;
     }
 }
 

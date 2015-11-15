@@ -37,7 +37,9 @@
             },
             attached: function() {
                 this.async(function() {
-                    var slider = new Slider('index-slider');
+                    var slider = new Slider({
+                        id: 'index-slider'
+                    });
                     slider.start();
                     this.querySelector('.slide').style.display = "block";
                 });
