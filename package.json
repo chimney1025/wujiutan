@@ -1,19 +1,23 @@
 {
-  "name": "wujiutan",
-  "version": "0.0.0",
-  "description": "Website for Wujiutan",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chimney1025/wujiutan.git"
-  },
-  "author": "Haoli Qu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chimney1025/wujiutan/issues"
-  },
-  "homepage": "https://github.com/chimney1025/wujiutan"
+    "name": "wujiutan",
+    "version": "0.0.0",
+    "description": "Website for Wujiutan",
+    "main": "index.html",
+    "dependencies": {
+        "http-server": "^0.8.0"
+    },
+    "scripts": {
+        "start": "http-server -p 8080",
+    "test": "http-server -p 8080"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chimney1025/wujiutan.git"
+    },
+    "author": "Haoli Qu",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/chimney1025/wujiutan/issues"
+    },
+    "homepage": "https://github.com/chimney1025/wujiutan"
 }
