@@ -7,7 +7,7 @@
         "http-server": "^0.8.0"
     },
     "scripts": {
-        "start": "http-server -p 8080",
+        "start": "http-server -p $PORT",
     "test": "http-server -p 8080"
     },
     "repository": {
