@@ -265,10 +265,10 @@ header nav {
     padding: 120px 80px;
 }
 #welcome .photo {
-    background-image: url("../images/home-hotel.jpg");
+    background-image: url("../images/src/waterandtree.jpg");
 }
 #rooms .photo {
-    background-image: url("../images/home-rooms.jpg");
+    background-image: url("../images/src/field.jpg");
 }
 #restaurant .photo {
     background-image: url("../images/home-restaurant.jpg");
