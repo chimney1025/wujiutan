@@ -1002,7 +1002,7 @@ html {
 body {
     background-color: #fff;
     color: #888;
-    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif,'Microsoft Yahei';
     font-size: 14px;
     line-height: 1.71429;
 }
