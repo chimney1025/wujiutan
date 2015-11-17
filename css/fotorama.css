@@ -80,7 +80,7 @@
 .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__nav, .fotorama__nav__frame, .fotorama__nav__shaft, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video-close, .fotorama__video-play {
 }
 .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play {
-    background: rgba(0, 0, 0, 0) url("../images/fotorama.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("http://coffeecreamthemes.com/themes/traveller/site/images/fotorama.png") no-repeat scroll 0 0;
 }
 @media not all, (min-resolution: 2dppx) {
 .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play {

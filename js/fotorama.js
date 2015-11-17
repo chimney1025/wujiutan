@@ -1293,7 +1293,7 @@ fotoramaVersion = '4.6.3';
             elData.l.m !== method ||
             elData.l.p !== position)) {
 
-            console.log('fit');
+            //console.log('fit');
 
             var width = measures.width,
                 height = measures.height,
