@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "image": "images/src/waterandtree.jpg",
+        "title": "乌桕滩山水观光露营区",
+        "subtitle": "远离喧嚣 享受生活",
+        "link": "single1.html"
+    },
+    {
+        "id": 2,
+        "image": "images/src/grass.jpg",
+        "title": "精品体验区",
+        "subtitle": "多姿多彩 田园风光",
+        "link": "single2.html"
+    },
+    {
+        "id": 3,
+        "image": "images/src/field.jpg",
+        "title": "滨江休闲农业园",
+        "subtitle": "垄上行 陌上归",
+        "link": "list2.html"
+    },
+    {
+        "id": 4,
+        "image": "images/src/spa.jpg",
+        "title": "温泉度假酒店",
+        "subtitle": "放松身心 回归自然",
+        "link": "list1.html"
+    }
+]

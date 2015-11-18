@@ -1,23 +1,27 @@
 {
-    "name": "wujiutan",
-    "version": "0.0.0",
-    "description": "Website for Wujiutan",
-    "main": "index.html",
-    "dependencies": {
-        "http-server": "^0.8.0"
-    },
-    "scripts": {
-        "start": "http-server -p $PORT",
+  "name": "wujiutan",
+  "version": "0.0.0",
+  "description": "Website for Wujiutan",
+  "main": "index.html",
+  "dependencies": {
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "http-server": "^0.8.0",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  },
+  "scripts": {
+    "start": "http-server -p $PORT",
     "test": "http-server -p 8080"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/chimney1025/wujiutan.git"
-    },
-    "author": "Haoli Qu",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/chimney1025/wujiutan/issues"
-    },
-    "homepage": "https://github.com/chimney1025/wujiutan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chimney1025/wujiutan.git"
+  },
+  "author": "Haoli Qu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chimney1025/wujiutan/issues"
+  },
+  "homepage": "https://github.com/chimney1025/wujiutan"
 }
