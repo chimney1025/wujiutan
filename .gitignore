@@ -1,4 +1,6 @@
 .DS_Store
+react.html
+scripts/
 npm-debug.log
 bower_components/
 node_modules/

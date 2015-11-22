@@ -151,6 +151,9 @@ header {
     top: 50%;
     transform: translateY(-50%);
 }
+#logo a {
+    font-size: 24px;
+}
 header nav {
     background: #222 none repeat scroll 0 0;
     border-top: 1px solid #2e2e2e;
@@ -265,10 +268,10 @@ header nav {
     padding: 120px 80px;
 }
 #welcome .photo {
-    background-image: url("../images/src/waterandtree.jpg");
+    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/golf8.jpg");
 }
 #rooms .photo {
-    background-image: url("../images/src/field.jpg");
+    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/poolside7.jpg");
 }
 #restaurant .photo {
     background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/home-restaurant.jpg");
