@@ -26,7 +26,7 @@ ITEM PAGE: http://codecanyon.net/item/jet-responsive-megamenu/5719593
 		var lastScreenWidth = windowWidth();
 		var bigScreen = false;
 		
-		$(menu).prepend("<li class='showhide'><span class='title'>MENU</span><span class='icon'><em></em><em></em><em></em><em></em></span></li>");
+		$(menu).prepend("<li class='showhide'><span class='title'></span><span class='icon'><em></em><em></em><em></em><em></em></span></li>");
 		
 		if(settings.indicator == true){
 			$(menu).find("a").each(function(){
@@ -134,6 +134,7 @@ ITEM PAGE: http://codecanyon.net/item/jet-responsive-megamenu/5719593
 		}
 		
 		function bindClick(){
+            /*
 			$(menu).find("li:not(.showhide)").each(function(){
 				if($(this).children(".dropdown, .megamenu").length > 0){
 					$(this).children("a").bind("click", function(e){
@@ -149,6 +150,7 @@ ITEM PAGE: http://codecanyon.net/item/jet-responsive-megamenu/5719593
 					});
 				}
 			});
+            */
 		}
 		
 		function showCollapse(){
