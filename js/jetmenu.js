@@ -14,9 +14,11 @@ ITEM PAGE: http://codecanyon.net/item/jet-responsive-megamenu/5719593
 			hideDelay: 0,
 			hideClickOut: true,
 			align: "left",
-			submenuTrigger: "hover",
+			submenuTrigger: "hover"
+            /*
 			scrollable: true,
 			scrollableMaxHeight: 240
+            */
 		}
 		$.extend( settings, options );
 		
