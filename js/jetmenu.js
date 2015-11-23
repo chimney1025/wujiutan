@@ -28,7 +28,7 @@ ITEM PAGE: http://codecanyon.net/item/jet-responsive-megamenu/5719593
 		var lastScreenWidth = windowWidth();
 		var bigScreen = false;
 		
-		$(menu).prepend("<li class='showhide'><span class='title'></span><span class='icon'><em></em><em></em><em></em><em></em></span></li>");
+		$(menu).prepend("<li class='showhide'><span class='title text-primary'>(网站LOGO)</span><span class='icon'><em></em><em></em><em></em><em></em></span></li>");
 		
 		if(settings.indicator == true){
 			$(menu).find("a").each(function(){

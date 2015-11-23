@@ -193,9 +193,9 @@
     </nav>
     <!-- Nav End -->
 
-</header>
+		</header>
 
-<!-- ============ HEADER END ============ -->
+		<!-- ============ HEADER END ============ -->
 
 		<!-- ============ CONTENT START ============ -->
 
@@ -203,399 +203,156 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center">
-						<h5>Our Guests Opinions</h5>
-						<h1>Reviews</h1>
+						<h5>Book a Room</h5>
+						<h1>Reservation</h1>
+						<div class="alert alert-warning" role="alert"><strong>This is not a real working form!</strong><br>This is an example form for a demo purpose only.</div>
 					</div>
 				</div>
-				<div class="row text-center" id="reviews-masonry">
-
-					<!-- Review 1 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review1.jpg" alt="" class="img-circle" />
-							<h4>Great wedding Venue</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, ipsum id ultrices laoreet, orci lectus molestie tellus, ut hendrerit urna orci lobortis metus. Proin varius, mi eu tincidunt elementum, mauris ligula volutpat arcu, id vehicula justo tortor eget erat.
-								<small>Anne Norton, New York</small>
-							</blockquote>
+				<form>
+					<h4>Reservation Details</h4>
+					<div class="row">
+						<div class="form-group has-feedback col-sm-6">
+							<label for="booking-arrival">Arrival</label>
+							<input type="text" class="form-control" id="booking-arrival">
+							<i class="fa fa-calendar form-control-feedback" aria-hidden="true"></i>
+						</div>
+						<div class="form-group has-feedback col-sm-6">
+							<label for="booking-departure">Departure</label>
+							<input type="text" class="form-control" id="booking-departure">
+							<i class="fa fa-calendar form-control-feedback" aria-hidden="true"></i>
 						</div>
 					</div>
-
-					<!-- Review 2 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review2.jpg" alt="" class="img-circle" />
-							<h4>Unforgettable Night</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</p>
-							<blockquote>
-								Ut aliquet tortor eu gravida pellentesque. Proin egestas viverra tortor, in eleifend nisi porta nec. Proin ac turpis justo. Quisque aliquam quam est, non ullamcorper lectus sodales id. Vivamus et efficitur nibh.
-								<small>George Welsh, London</small>
-							</blockquote>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label for="booking-type">Room type</label>
+								<select class="form-control" id="booking-type">
+									<option>Choose</option>
+									<option>Royal Suite</option>
+									<option>Executive Suite</option>
+									<option>Double Room</option>
+									<option>Single Room</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label for="booking-rooms">No. of Rooms</label>
+								<select class="form-control" id="booking-rooms">
+									<option>Choose</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label for="booking-adults">Adults</label>
+								<select class="form-control" id="booking-adults">
+									<option>Choose</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="form-group">
+								<label for="booking-children">Children</label>
+								<select class="form-control" id="booking-children">
+									<option>Choose</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
 						</div>
 					</div>
-
-					<!-- Review 3 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review3.jpg" alt="" class="img-circle" />
-							<h4>Amazing Food</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Fusce eu convallis mauris, et ornare neque. Nulla cursus sit amet ex eu tempus. Etiam rhoncus tincidunt eleifend. Morbi quis iaculis arcu. Curabitur efficitur finibus est, sed dictum justo maximus lobortis. Donec lobortis augue ac rutrum pharetra. Fusce sit amet tortor a libero dapibus vestibulum nec eu nisl. Curabitur vitae scelerisque est, vitae tincidunt mauris. Vestibulum sed consectetur dolor, et consequat nibh. Nulla facilisi.
-								<small>John Meadow, Seattle</small>
-							</blockquote>
+					<hr>
+					<h4>Payment Details</h4>
+					<div class="row">
+						<div class="form-group col-sm-3">
+							<label for="booking-card-type">Credit Card Type</label>
+							<select class="form-control" id="booking-card-type">
+								<option>Choose</option>
+								<option>Visa</option>
+								<option>Master Card</option>
+								<option>Maestro</option>
+								<option>American Express</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="booking-card-number">Credit Card Number</label>
+							<input type="text" class="form-control" id="booking-card-number">
+						</div>
+						<div class="form-group col-sm-3">
+							<label for="booking-ccv">CCV Number</label>
+							<input type="text" class="form-control" id="booking-ccv">
 						</div>
 					</div>
-
-					<!-- Review 4 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review4.jpg" alt="" class="img-circle" />
-							<h4>Very nice staff</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Aliquam erat volutpat. Pellentesque sit amet semper sapien. Sed ultricies vulputate aliquet. Praesent eget ultrices dui. Curabitur aliquet convallis dolor. Aliquam vehicula accumsan varius. Phasellus bibendum finibus nisi, id maximus lorem venenatis lacinia.
-								<small>Gina Oswald, Washington</small>
-							</blockquote>
+					<hr>
+					<h4>Personal Details</h4>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="booking-name">Your Name</label>
+							<input type="text" class="form-control" id="booking-name">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="booking-company">Company Name (Optional)</label>
+							<input type="text" class="form-control" id="booking-company">
 						</div>
 					</div>
-
-					<!-- Review 5 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review5.jpg" alt="" class="img-circle" />
-							<h4>Fantastic Weekend</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</p>
-							<blockquote>
-								In quis semper dolor. Sed diam erat, convallis et scelerisque at, feugiat efficitur neque. Sed eros massa, facilisis vel tempor sit amet, interdum ac ipsum. Maecenas id sem quis nisi malesuada laoreet. Proin lobortis malesuada nibh, ac accumsan leo luctus vitae. Fusce in imperdiet lacus.
-								<small>Jerry Boyne, Chicago</small>
-							</blockquote>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="booking-email">Email</label>
+							<input type="email" class="form-control" id="booking-email">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="booking-phone">Phone</label>
+							<input type="phone" class="form-control" id="booking-phone">
 						</div>
 					</div>
-
-					<!-- Review 6 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review6.jpg" alt="" class="img-circle" />
-							<h4>Best hotel ever</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-							</p>
-							<blockquote>
-								Quisque posuere vehicula ipsum volutpat euismod. Suspendisse sed dignissim ligula, non euismod metus. Nullam mollis felis eget ligula congue vulputate. Donec sit amet nisl est. Maecenas bibendum urna eget sapien tristique, viverra condimentum odio varius. Sed a turpis mi.
-								<small>Kate Watson, Los Angeles</small>
-							</blockquote>
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="booking-address1">Address Line 1</label>
+							<input type="text" class="form-control" id="booking-address1">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="booking-address2">Address Line 2 (Optional)</label>
+							<input type="text" class="form-control" id="booking-address2">
 						</div>
 					</div>
-
-					<!-- Review 7 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review1.jpg" alt="" class="img-circle" />
-							<h4>Great wedding Venue</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, ipsum id ultrices laoreet, orci lectus molestie tellus, ut hendrerit urna orci lobortis metus. Proin varius, mi eu tincidunt elementum, mauris ligula volutpat arcu, id vehicula justo tortor eget erat.
-								<small>Anne Norton, New York</small>
-							</blockquote>
+					<div class="row">
+						<div class="form-group col-sm-2">
+							<label for="booking-zipcode">Zipcode</label>
+							<input type="text" class="form-control" id="booking-zipcode">
+						</div>
+						<div class="form-group col-sm-4">
+							<label for="booking-city">City</label>
+							<input type="text" class="form-control" id="booking-city">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="booking-country">Country</label>
+							<input type="text" class="form-control" id="booking-country">
 						</div>
 					</div>
-
-					<!-- Review 8 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review2.jpg" alt="" class="img-circle" />
-							<h4>Unforgettable Night</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</p>
-							<blockquote>
-								Ut aliquet tortor eu gravida pellentesque. Proin egestas viverra tortor, in eleifend nisi porta nec. Proin ac turpis justo. Quisque aliquam quam est, non ullamcorper lectus sodales id. Vivamus et efficitur nibh.
-								<small>George Welsh, London</small>
-							</blockquote>
+					<hr>
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<button type="submit" class="btn btn-primary">Book Now</button>
 						</div>
 					</div>
-
-					<!-- Review 9 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review3.jpg" alt="" class="img-circle" />
-							<h4>Amazing Food</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Fusce eu convallis mauris, et ornare neque. Nulla cursus sit amet ex eu tempus. Etiam rhoncus tincidunt eleifend. Morbi quis iaculis arcu. Curabitur efficitur finibus est, sed dictum justo maximus lobortis. Donec lobortis augue ac rutrum pharetra. Fusce sit amet tortor a libero dapibus vestibulum nec eu nisl. Curabitur vitae scelerisque est, vitae tincidunt mauris. Vestibulum sed consectetur dolor, et consequat nibh. Nulla facilisi.
-								<small>John Meadow, Seattle</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 10 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review4.jpg" alt="" class="img-circle" />
-							<h4>Very nice staff</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Aliquam erat volutpat. Pellentesque sit amet semper sapien. Sed ultricies vulputate aliquet. Praesent eget ultrices dui. Curabitur aliquet convallis dolor. Aliquam vehicula accumsan varius. Phasellus bibendum finibus nisi, id maximus lorem venenatis lacinia.
-								<small>Gina Oswald, Washington</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 11 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review5.jpg" alt="" class="img-circle" />
-							<h4>Fantastic Weekend</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</p>
-							<blockquote>
-								In quis semper dolor. Sed diam erat, convallis et scelerisque at, feugiat efficitur neque. Sed eros massa, facilisis vel tempor sit amet, interdum ac ipsum. Maecenas id sem quis nisi malesuada laoreet. Proin lobortis malesuada nibh, ac accumsan leo luctus vitae. Fusce in imperdiet lacus.
-								<small>Jerry Boyne, Chicago</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 12 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review6.jpg" alt="" class="img-circle" />
-							<h4>Best hotel ever</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-							</p>
-							<blockquote>
-								Quisque posuere vehicula ipsum volutpat euismod. Suspendisse sed dignissim ligula, non euismod metus. Nullam mollis felis eget ligula congue vulputate. Donec sit amet nisl est. Maecenas bibendum urna eget sapien tristique, viverra condimentum odio varius. Sed a turpis mi.
-								<small>Kate Watson, Los Angeles</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 13 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review1.jpg" alt="" class="img-circle" />
-							<h4>Great wedding Venue</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, ipsum id ultrices laoreet, orci lectus molestie tellus, ut hendrerit urna orci lobortis metus. Proin varius, mi eu tincidunt elementum, mauris ligula volutpat arcu, id vehicula justo tortor eget erat.
-								<small>Anne Norton, New York</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 14 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review2.jpg" alt="" class="img-circle" />
-							<h4>Unforgettable Night</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</p>
-							<blockquote>
-								Ut aliquet tortor eu gravida pellentesque. Proin egestas viverra tortor, in eleifend nisi porta nec. Proin ac turpis justo. Quisque aliquam quam est, non ullamcorper lectus sodales id. Vivamus et efficitur nibh.
-								<small>George Welsh, London</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 15 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review3.jpg" alt="" class="img-circle" />
-							<h4>Amazing Food</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Fusce eu convallis mauris, et ornare neque. Nulla cursus sit amet ex eu tempus. Etiam rhoncus tincidunt eleifend. Morbi quis iaculis arcu. Curabitur efficitur finibus est, sed dictum justo maximus lobortis. Donec lobortis augue ac rutrum pharetra. Fusce sit amet tortor a libero dapibus vestibulum nec eu nisl. Curabitur vitae scelerisque est, vitae tincidunt mauris. Vestibulum sed consectetur dolor, et consequat nibh. Nulla facilisi.
-								<small>John Meadow, Seattle</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 16 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review4.jpg" alt="" class="img-circle" />
-							<h4>Very nice staff</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Aliquam erat volutpat. Pellentesque sit amet semper sapien. Sed ultricies vulputate aliquet. Praesent eget ultrices dui. Curabitur aliquet convallis dolor. Aliquam vehicula accumsan varius. Phasellus bibendum finibus nisi, id maximus lorem venenatis lacinia.
-								<small>Gina Oswald, Washington</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 17 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review5.jpg" alt="" class="img-circle" />
-							<h4>Fantastic Weekend</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</p>
-							<blockquote>
-								In quis semper dolor. Sed diam erat, convallis et scelerisque at, feugiat efficitur neque. Sed eros massa, facilisis vel tempor sit amet, interdum ac ipsum. Maecenas id sem quis nisi malesuada laoreet. Proin lobortis malesuada nibh, ac accumsan leo luctus vitae. Fusce in imperdiet lacus.
-								<small>Jerry Boyne, Chicago</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 18 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review6.jpg" alt="" class="img-circle" />
-							<h4>Best hotel ever</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-							</p>
-							<blockquote>
-								Quisque posuere vehicula ipsum volutpat euismod. Suspendisse sed dignissim ligula, non euismod metus. Nullam mollis felis eget ligula congue vulputate. Donec sit amet nisl est. Maecenas bibendum urna eget sapien tristique, viverra condimentum odio varius. Sed a turpis mi.
-								<small>Kate Watson, Los Angeles</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 19 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review1.jpg" alt="" class="img-circle" />
-							<h4>Great wedding Venue</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-								<i class="fa fa-star-o"></i>
-							</p>
-							<blockquote>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, ipsum id ultrices laoreet, orci lectus molestie tellus, ut hendrerit urna orci lobortis metus. Proin varius, mi eu tincidunt elementum, mauris ligula volutpat arcu, id vehicula justo tortor eget erat.
-								<small>Anne Norton, New York</small>
-							</blockquote>
-						</div>
-					</div>
-
-					<!-- Review 20 -->
-					<div class="review">
-						<div class="review-container">
-							<img src="images/review2.jpg" alt="" class="img-circle" />
-							<h4>Unforgettable Night</h4>
-							<p class="stars">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</p>
-							<blockquote>
-								Ut aliquet tortor eu gravida pellentesque. Proin egestas viverra tortor, in eleifend nisi porta nec. Proin ac turpis justo. Quisque aliquam quam est, non ullamcorper lectus sodales id. Vivamus et efficitur nibh.
-								<small>George Welsh, London</small>
-							</blockquote>
-						</div>
-					</div>
-
-				</div>
+				</form>
 			</div>
 		</section>
 
 		<!-- ============ CONTENT END ============ -->
 
-<!-- ============ FOOTER START ============ -->
+		<!-- ============ FOOTER START ============ -->
 
 <footer>
     <div id="widgets">
@@ -758,32 +515,8 @@
 <!-- Datepicker Plugin -->
 <script src="js/bootstrap-datepicker.js"></script>
 
-<!-- Fotorama Plugin -->
-<script src="js/fotorama.js"></script>
-
 <!-- Parallax Plugin -->
 <script src="js/parallax.js"></script>
-
-<!-- Masonry Plugin -->
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script>
-			(function($) {
-				"use strict";
-				$(document).ready(function() {
-
-					// initialize Masonry
-					var $container = $('#reviews-masonry').masonry({
-						itemSelector: '.review'
-					});
-
-					// layout Masonry again after all images have loaded
-					$container.imagesLoaded(function() {
-					 	$container.masonry();
-					});
-				})
-			})(jQuery);
-		</script>
 
 <!-- Fancybox Plugin -->
 <script src="js/fancybox.pack.js"></script>

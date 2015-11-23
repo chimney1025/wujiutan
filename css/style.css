@@ -199,7 +199,7 @@ header nav {
     width: 100%;
 }
 #video video {
-    background: rgba(0, 0, 0, 0) url("http://coffeecreamthemes.com/themes/traveller/site/images/cover.jpg") no-repeat scroll 0 0 / cover ;
+    background: rgba(0, 0, 0, 0) url("../images/golf8.jpg") no-repeat scroll 0 0 / cover ;
     bottom: 0;
     height: auto;
     min-height: 100%;
@@ -268,19 +268,19 @@ header nav {
     padding: 120px 80px;
 }
 #welcome .photo {
-    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/golf8.jpg");
+    background-image: url("../images/golf8.jpg");
 }
 #rooms .photo {
-    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/poolside7.jpg");
+    background-image: url("../images/poolside7.jpg");
 }
 #restaurant .photo {
-    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/home-restaurant.jpg");
+    background-image: url("../images/home-restaurant.jpg");
 }
 #spa .photo {
-    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/home-spa.jpg");
+    background-image: url("../images/home-spa.jpg");
 }
 #golf .photo {
-    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/home-golf.jpg");
+    background-image: url("../images/home-golf.jpg");
 }
 #specials {
     padding: 80px 0;
@@ -439,7 +439,7 @@ header nav {
     position: relative;
 }
 #reviews {
-    background-image: url("http://coffeecreamthemes.com/themes/traveller/site/images/reviews.jpg");
+    background-image: url("../images/menu-room3.jpg");
     color: #fff;
     padding: 60px 0;
 }
