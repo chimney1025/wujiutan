@@ -26,6 +26,11 @@
     */
     if(!Modernizr.video) {
         window.location.href = "slider.html";
+    } else {
+        var v = document.createElement('video');
+        if(!v.canPlayType || !v.canPlayType('video/mp4').replace(/no/, '')) {
+           window.location.href = "slider.html";
+        }
     }
     
     </script>
