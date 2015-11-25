@@ -17,10 +17,17 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <script src="js/modernizr.min.js"></script>
     <script>
+    /*
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             window.location.href = "slider.html";
         }
+    */
+    if(!Modernizr.video) {
+        window.location.href = "slider.html";
+    }
+    
     </script>
 
 </head>
