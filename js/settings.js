@@ -237,7 +237,7 @@
         
 
         // Detecting which sections are stretching the body container
-
+        /*
         var docWidth = document.documentElement.offsetWidth;
 
         [].forEach.call(
@@ -248,6 +248,7 @@
             }
           }
         );
+        */
 
 		//=====================================================================
 
