@@ -209,7 +209,7 @@ video {
     width: auto;
 }
 #video video {
-    background: rgba(0, 0, 0, 0) url("../images/poolside7.jpg") no-repeat scroll 0 0 / cover ;
+    background: rgba(0, 0, 0, 0) url("../images/poolside7.jpg") no-repeat local 0 0 / cover ;
 }
 
 video#video1 {
