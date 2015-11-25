@@ -1,5 +1,6 @@
 .DS_Store
 react.html
+src/
 scripts/
 npm-debug.log
 bower_components/

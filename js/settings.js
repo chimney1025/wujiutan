@@ -33,7 +33,7 @@
 		$('#slider').superslides({
 			play: 6000,
 			animation: 'fade',
-			animation_speed: 2000
+			animation_speed: 1000
 		});
 
 		// ====================================================================
@@ -50,8 +50,8 @@
 		// Flat Weather
 
 		var example = $("#weather").flatWeatherPlugin({
-			location: "Los Anegeles", //city and region *required 
-			country: "USA",         //country *required 
+			location: "Guilin", //city and region *required 
+			country: "China",         //country *required 
 			//optional:
 			api: "yahoo", //default: openweathermap (openweathermap or yahoo)
 			//apikey: "your-api-key",   //optional api key for openweather
@@ -135,8 +135,8 @@
 			margin: 0,
 			loop: true,
 			dots: false,
-			nav: false,
-			autoPlay: 4000
+			nav: true,
+			navText: ['<i class="fa fa-arrow-left fa-2x"></i>','<i class="fa fa-arrow-right fa-2x"></i>']
 		});
 
 		//=====================================================================
@@ -234,21 +234,23 @@
 		}).data('datepicker');
 
 		//=====================================================================
+        
+
+        // Detecting which sections are stretching the body container
+
+        var docWidth = document.documentElement.offsetWidth;
+
+        [].forEach.call(
+          document.querySelectorAll('*'),
+          function(el) {
+            if (el.offsetWidth > docWidth) {
+              console.log(el);
+            }
+          }
+        );
+
+		//=====================================================================
 
 	})
 
 })(jQuery);
-
-/* Detecting which sections are stretching the body container */
-/*
-var docWidth = document.documentElement.offsetWidth;
-
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);
-*/
