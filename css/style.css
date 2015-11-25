@@ -198,8 +198,7 @@ header nav {
     position: relative;
     width: 100%;
 }
-#video video {
-    background: rgba(0, 0, 0, 0) url("../images/golf8.jpg") no-repeat scroll 0 0 / cover ;
+video {
     bottom: 0;
     height: auto;
     min-height: 100%;
@@ -209,6 +208,22 @@ header nav {
     right: 0;
     width: auto;
 }
+#video video {
+    background: rgba(0, 0, 0, 0) url("../images/poolside7.jpg") no-repeat scroll 0 0 / cover ;
+}
+
+video#video1 {
+    background: rgba(0, 0, 0, 0) url("../images/golf8.jpg") no-repeat scroll 0 0 / cover ;
+}
+
+video#video2 {
+    background: rgba(0, 0, 0, 0) url("../images/poolside2.jpg") no-repeat scroll 0 0 / cover ;
+}
+
+video#video3 {
+    background: rgba(0, 0, 0, 0) url("../images/home-spa.jpg") no-repeat scroll 0 0 / cover ;
+}
+
 #video .tint {
     background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
     height: 100%;
