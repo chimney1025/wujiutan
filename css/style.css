@@ -272,12 +272,14 @@ video#video3 {
 }
 .home-section {
     display: flex;
+    display: -ms-flexbox;
     overflow: hidden;
 }
 .home-section .photo {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 .home-section .padding {
     padding: 120px 80px;
